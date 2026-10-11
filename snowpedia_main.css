@@ -127,6 +127,7 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .section-heading h1, .section-heading h2 { font-size: 28px; line-height: 1.4; }
 .rank-section + .rank-section { border-top: 1px solid #e4eaf2; }
+.rank-category {margin-top: 14px;}
 .category-menu { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .category-menu label { padding: 8px 16px; border-radius: 20px; background: #f4f6f9; cursor: pointer; font-size: 14px; }
 .rank-panel { display: none; }
