@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 작성자 -->
+  <meta name="author" content="심서연 2410352">
+  <title>snowpedia</title>
+  <!-- main CSS 파일 연결 -->
+  <link rel="stylesheet" href="snowpedia_main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top"><img src="images/snowpedia-logo.png" width="1040" height="200" alt="snowpedia"></a>
+      <nav class="main-nav" aria-label="주 메뉴">
+        <a href="#discovery">영화·드라마</a>
+        <a href="#now-showing">영화관 예매</a>
+        <a href="#reviews">리뷰</a>
+        <!-- 보관함 페이지 연결 임시 링크 -->
+        <a href="#">내 보관함</a>
+      </nav>
+      <div class="search-box" role="search">
+        <!-- 검색 입력 UI -->
+        <label class="visually-hidden" for="site-search">작품명, 배우, 감독 검색</label>
+        <span class="search-icon" aria-hidden="true"></span>
+        <input id="site-search" type="search" placeholder="작품명, 배우, 감독을 검색해 보세요">
+      </div>
+      <div class="account-links">
+        <!-- 로그인, 회원가입 화면 임시 링크 -->
+        <a href="#">로그인</a><a class="button signup" href="#">회원가입</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 영화 순위 -->
+  <main id="main" tabindex="-1">
+    <!-- 제목 - 카테고리 - 작품 목록 -->
+    <section class="container section rank-section" id="now-showing" aria-labelledby="showing-heading">
+      <div class="section-heading">
+        <h1 id="showing-heading">영화 순위</h1>
+        <a class="text-link" href="#">영화 더 보기 →</a>
+      </div>
+
+      <fieldset class="rank-category">
+        <legend class="visually-hidden">영화 순위 카테고리 선택</legend>
+        <input class="visually-hidden" type="radio" name="movie-category" id="category-theater" checked>
+        <input class="visually-hidden" type="radio" name="movie-category" id="category-netflix">
+        <input class="visually-hidden" type="radio" name="movie-category" id="category-watcha">
+        <div class="category-menu">
+          <label for="category-theater">상영작</label>
+          <label for="category-netflix">넷플릭스</label>
+          <label for="category-watcha">왓챠</label>
+        </div>
+<div class="rank-panels">
+          <!-- 상영작 목록 -->
+          <div class="rank-panel" id="panel-category-theater">
+            <ul class="poster-list" id="showing-list">
+
+              <li>
+                <article class="poster-card" id="movie-극장판 치이카와-인어 섬의 비밀" aria-labelledby="title-극장판 치이카와-인어 섬의 비밀">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="1위">1</span>
+                    <a class="poster-link" href="#" aria-label="극장판 치이카와-인어 섬의 비밀 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="극장판 치이카와-인어 섬의 비밀 포스터 이미지">
+                    </a>
+                    <span class="age-badge">전체</span>
+                    <label class="wish" for="극장판 치이카와-인어 섬의 비밀">
+                      <input id="극장판 치이카와-인어 섬의 비밀" class="visually-hidden" type="checkbox" aria-label="극장판 치이카와-인어 섬의 비밀 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="title-극장판 치이카와-인어 섬의 비밀" class="movie-title">극장판 치이카와-인어 섬의 비밀</h3>
+                  <p class="movie-info">애니메이션 · 99분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.3</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 428명 평가</small>
+                  </p>
+                  <a class="button booking-button" href="#" aria-label="극장판 치이카와-인어 섬의 비밀 예매하기">예매하기</a>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="movie-odyssey" aria-labelledby="title-odyssey">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="2위">2</span>
+                    <a class="poster-link" href="#" aria-label="오디세이 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="오디세이 포스터 이미지">
+                    </a>
+                    <span class="age-badge">15세</span>
+                    <label class="wish" for="wish-odyssey">
+                      <input id="wish-odyssey" class="visually-hidden" type="checkbox" aria-label="오디세이 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="title-odyssey" class="movie-title">오디세이</h3>
+                  <p class="movie-info">액션, 드라마, 어드벤처 · 172분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.1</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 316명 평가</small>
+                  </p>
+                  <a class="button booking-button" href="#" aria-label="오디세이 예매하기">예매하기</a>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="movie-assassin(s)" aria-labelledby="title-assassin(s)">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="3위">3</span>
+                    <a class="poster-link" href="#" aria-label="암살자(들) 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="암살자(들) 포스터 이미지">
+                    </a>
+                    <span class="age-badge">12세</span>
+                    <label class="wish" for="wish-assassin(s)">
+                      <input id="wish-assassin(s)" class="visually-hidden" type="checkbox" aria-label="암살자(들) 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="title-assassin(s)" class="movie-title">암살자(들)</h3>
+                  <p class="movie-info">범죄, 드라마 · 131분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.4</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 582명 평가</small>
+                  </p>
+                  <a class="button booking-button" href="#" aria-label="암살자(들) 예매하기">예매하기</a>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="movie-a hoodwinker" aria-labelledby="title-a hoodwinker">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="4위">4</span>
+                    <a class="poster-link" href="#" aria-label="타짜-벨제붑의 노래 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="타짜-벨제붑의 노래 포스터 이미지">
+                    </a>
+                    <span class="age-badge">19세</span>
+                    <label class="wish" for="wish-a hoodwinker">
+                      <input id="wish-a hoodwinker" class="visually-hidden" type="checkbox" aria-label="타짜-벨제붑의 노래 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="title-a hoodwinker" class="movie-title">타짜-벨제붑의 노래</h3>
+                  <p class="movie-info">범죄, 드라마 · 129분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.2</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 207명 평가</small>
+                  </p>
+                  <a class="button booking-button" href="#" aria-label="타짜-벨제붑의 노래 예매하기">예매하기</a>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="movie-revival-man" aria-labelledby="title-revival-man">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="5위">5</span>
+                    <a class="poster-link" href="#" aria-label="부활남-더 레드 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="부활남-더 레드 포스터 이미지">
+                    </a>
+                    <span class="age-badge">12세</span>
+                    <label class="wish" for="wish-revival-man">
+                      <input id="wish-revival-man" class="visually-hidden" type="checkbox" aria-label="부활남-더 레드 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="title-revival-man" class="movie-title">부활남-더 레드</h3>
+                  <p class="movie-info">액션 · 102분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.0</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 193명 평가</small>
+                  </p>
+                  <a class="button booking-button" href="#" aria-label="부활남-더 레드 예매하기">예매하기</a>
+                </article>
+              </li>
+</ul>
+          </div>
+          <!-- 넷플릭스 영화 목록 -->
+          <div class="rank-panel" id="panel-category-netflix">
+            <ul class="poster-list" aria-label="넷플릭스 영화 순위">
+
+              <li>
+                <article class="poster-card" id="netflix-movie-눈동자" aria-labelledby="netflix-title-눈동자">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="1위">1</span>
+                    <a class="poster-link" href="#" aria-label="눈동자 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="눈동자 포스터 이미지">
+                    </a>
+                    <span class="age-badge">15세</span>
+                    <label class="wish" for="netflix-눈동자">
+                      <input id="netflix-눈동자" class="visually-hidden" type="checkbox" aria-label="눈동자 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="netflix-title-눈동자" class="movie-title">눈동자</h3>
+                  <p class="movie-info">미스터리 · 105분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.3</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 428명 평가</small>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="netflix-movie-끝장수사" aria-labelledby="netflix-title-끝장수사">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="2위">2</span>
+                    <a class="poster-link" href="#" aria-label="끝장수사 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="끝장수사 포스터 이미지">
+                    </a>
+                    <span class="age-badge">15세</span>
+                    <label class="wish" for="netflix-wish-끝장수사">
+                      <input id="netflix-wish-끝장수사" class="visually-hidden" type="checkbox" aria-label="끝장수사 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="netflix-title-끝장수사" class="movie-title">끝장수사</h3>
+                  <p class="movie-info">범죄, 스릴러 · 97분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.2</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 297명 평가</small>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="netflix-movie-하나 코리아" aria-labelledby="netflix-title-하나 코리아">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="3위">3</span>
+                    <a class="poster-link" href="#" aria-label="하나 코리아 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="하나 코리아 포스터 이미지">
+                    </a>
+                    <span class="age-badge">12세</span>
+                    <label class="wish" for="netflix-wish-하나 코리아">
+                      <input id="netflix-wish-하나 코리아" class="visually-hidden" type="checkbox" aria-label="하나 코리아 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="netflix-title-하나 코리아" class="movie-title">하나 코리아</h3>
+                  <p class="movie-info">드라마 · 105분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.4</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 582명 평가</small>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="netflix-movie-벤허" aria-labelledby="netflix-title-벤허">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="4위">4</span>
+                    <a class="poster-link" href="#" aria-label="벤허 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="벤허 포스터 이미지">
+                    </a>
+                    <span class="age-badge">15세</span>
+                    <label class="wish" for="netflix-wish-벤허">
+                      <input id="netflix-wish-벤허" class="visually-hidden" type="checkbox" aria-label="벤허 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="netflix-title-벤허" class="movie-title">벤허</h3>
+                  <p class="movie-info">범죄, 드라마 · 129분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.2</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 207명 평가</small>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="netflix-movie-필사의 추격" aria-labelledby="netflix-title-필사의 추격">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="5위">5</span>
+                    <a class="poster-link" href="#" aria-label="필사의 추격 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="필사의 추격 포스터 이미지">
+                    </a>
+                    <span class="age-badge">15세</span>
+                    <label class="wish" for="netflix-wish-필사의 추격">
+                      <input id="netflix-wish-필사의 추격" class="visually-hidden" type="checkbox" aria-label="필사의 추격 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="netflix-title-필사의 추격" class="movie-title">필사의 추격</h3>
+                  <p class="movie-info">범죄 · 109분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.0</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 193명 평가</small>
+                  </p>
+                </article>
+              </li>
+</ul>
+          </div>
+          <!-- 왓챠 영화 목록 -->
+          <div class="rank-panel" id="panel-category-watcha">
+            <ul class="poster-list" aria-label="왓챠 영화 순위">
+
+              <li>
+                <article class="poster-card" id="watcha-movie-시맨틱 에러: 더 무비" aria-labelledby="watcha-title-시맨틱 에러: 더 무비">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="1위">1</span>
+                    <a class="poster-link" href="#" aria-label="시맨틱 에러: 더 무비 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="시맨틱 에러: 더 무비 포스터 이미지">
+                    </a>
+                    <span class="age-badge">12세</span>
+                    <label class="wish" for="watcha-시맨틱 에러: 더 무비">
+                      <input id="watcha-시맨틱 에러: 더 무비" class="visually-hidden" type="checkbox" aria-label="시맨틱 에러: 더 무비 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="watcha-title-시맨틱 에러: 더 무비" class="movie-title">시맨틱 에러: 더 무비</h3>
+                  <p class="movie-info">로맨스 · 178분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.0</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 193명 평가</small>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="watcha-movie-내 여자친구의 남자친구" aria-labelledby="watcha-title-내 여자친구의 남자친구">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="2위">2</span>
+                    <a class="poster-link" href="#" aria-label="내 여자친구의 남자친구 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="내 여자친구의 남자친구 포스터 이미지">
+                    </a>
+                    <span class="age-badge">15세</span>
+                    <label class="wish" for="watcha-wish-내 여자친구의 남자친구">
+                      <input id="watcha-wish-내 여자친구의 남자친구" class="visually-hidden" type="checkbox" aria-label="내 여자친구의 남자친구 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="watcha-title-내 여자친구의 남자친구" class="movie-title">내 여자친구의 남자친구</h3>
+                  <p class="movie-info">로맨스 · 103분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.2</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 256명 평가</small>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="watcha-movie-에브리씽 에브리웨어 올 앳 원스" aria-labelledby="watcha-title-에브리씽 에브리웨어 올 앳 원스">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="3위">3</span>
+                    <a class="poster-link" href="#" aria-label="에브리씽 에브리웨어 올 앳 원스 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="에브리씽 에브리웨어 올 앳 원스 포스터 이미지">
+                    </a>
+                    <span class="age-badge">15세</span>
+                    <label class="wish" for="watcha-wish-에브리씽 에브리웨어 올 앳 원스">
+                      <input id="watcha-wish-에브리씽 에브리웨어 올 앳 원스" class="visually-hidden" type="checkbox" aria-label="에브리씽 에브리웨어 올 앳 원스 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="watcha-title-에브리씽 에브리웨어 올 앳 원스" class="movie-title">에브리씽 에브리웨어 올 앳 원스</h3>
+                  <p class="movie-info">액션, 모험, SF · 139분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.2</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 256명 평가</small>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="watcha-movie-인사이드 르윈" aria-labelledby="watcha-title-인사이드 르윈">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="4위">4</span>
+                    <a class="poster-link" href="#" aria-label="인사이드 르윈 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="인사이드 르윈 포스터 이미지">
+                    </a>
+                    <span class="age-badge">15세</span>
+                    <label class="wish" for="watcha-wish-인사이드 르윈">
+                      <input id="watcha-wish-인사이드 르윈" class="visually-hidden" type="checkbox" aria-label="인사이드 르윈 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="watcha-title-인사이드 르윈" class="movie-title">인사이드 르윈</h3>
+                  <p class="movie-info">코미디, 드라마 · 105분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.2</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 256명 평가</small>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card" id="watcha-movie-살인의 추억" aria-labelledby="watcha-title-살인의 추억">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="5위">5</span>
+                    <a class="poster-link" href="#" aria-label="살인의 추억 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="572" alt="살인의 추억 포스터 이미지">
+                    </a>
+                    <span class="age-badge">15세</span>
+                    <label class="wish" for="watcha-wish-살인의 추억">
+                      <input id="watcha-wish-살인의 추억" class="visually-hidden" type="checkbox" aria-label="살인의 추억 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 id="watcha-title-살인의 추억" class="movie-title">살인의 추억</h3>
+                  <p class="movie-info">범죄, 미스터리, 스릴러 · 132분</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.2</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                    <small>· 207명 평가</small>
+                  </p>
+                </article>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </fieldset>
+    </section>
+
+    <!-- 드라마 순위 -->
+    <!-- 제목 - 카테고리 - 작품 목록 -->
+    <section class="container section rank-section" id="discovery" aria-labelledby="discovery-heading">
+      <div class="section-heading">
+        <h2 id="discovery-heading">드라마 순위</h2>
+        <a class="text-link" href="#">드라마 더 보기 →</a>
+      </div>
+      <fieldset class="rank-category">
+        <legend class="visually-hidden">드라마 순위 카테고리 선택</legend>
+        <input class="visually-hidden" type="radio" name="drama-platform" id="drama-netflix" checked>
+        <input class="visually-hidden" type="radio" name="drama-platform" id="drama-watcha">
+        <div class="category-menu">
+          <label for="drama-netflix">넷플릭스</label>
+          <label for="drama-watcha">왓챠</label>
+        </div>
+<div class="rank-panels">
+          <!-- 넷플릭스 드라마 목록 -->
+          <div class="rank-panel" id="panel-drama-netflix">
+            <ul class="poster-list" id="netflix-discovery-list" aria-label="넷플릭스 드라마 순위">
+
+              <li>
+                <article class="poster-card">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="1위">1</span>
+                    <a class="poster-link" href="#" aria-label="빌로우 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="494" alt="빌로우">
+                    </a>
+                    <label class="wish" for="netflix-wish-drama-빌로우">
+                      <input id="netflix-wish-drama-빌로우" class="visually-hidden" type="checkbox" aria-label="빌로우 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 class="movie-title">빌로우</h3>
+                  <p class="movie-info">드라마 · 6부작</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.5</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="2위">2</span>
+                    <a class="poster-link" href="#" aria-label="나를 충전해줘 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="494" alt="나를 충전해줘">
+                    </a>
+                    <label class="wish" for="netflix-wish-drama-나를 충전해줘">
+                      <input id="netflix-wish-drama-나를 충전해줘" class="visually-hidden" type="checkbox" aria-label="나를 충전해줘 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 class="movie-title">나를 충전해줘</h3>
+                  <p class="movie-info">로맨스 · 12부작</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.2</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="3위">3</span>
+                    <a class="poster-link" href="#" aria-label="닥터X: 하얀 마피아의 시대 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="494" alt="닥터X: 하얀 마피아의 시대">
+                    </a>
+                    <label class="wish" for="netflix-wish-drama-닥터X:하얀 마피아의 시대">
+                      <input id="netflix-wish-drama-닥터X: 하얀 마피아의 시대" class="visually-hidden" type="checkbox" aria-label="닥터X: 하얀 마피아의 시대 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 class="movie-title">닥터X: 하얀 마피아의 시대</h3>
+                  <p class="movie-info">드라마 · 12부작</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.4</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="4위">4</span>
+                    <a class="poster-link" href="#" aria-label="스캔들 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="494" alt="스캔들">
+                    </a>
+                    <label class="wish" for="netflix-wish-drama-스캔들">
+                      <input id="netflix-wish-drama-스캔들" class="visually-hidden" type="checkbox" aria-label="스캔들 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 class="movie-title">스캔들</h3>
+                  <p class="movie-info">사극 · 10부작</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.1</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="5위">5</span>
+                    <a class="poster-link" href="#" aria-label="다운타임 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="494" alt="다운타임">
+                    </a>
+                    <label class="wish" for="netflix-wish-drama-다운타임">
+                      <input id="netflix-wish-drama-다운타임" class="visually-hidden" type="checkbox" aria-label="다운타임 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 class="movie-title">다운타임</h3>
+                  <p class="movie-info">스릴러 · 8부작</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.3</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                  </p>
+                </article>
+              </li>
+</ul>
+          </div>
+          <!-- 왓챠 드라마 목록 -->
+          <div class="rank-panel" id="panel-drama-watcha">
+            <ul class="poster-list" id="watcha-discovery-list" aria-label="왓챠 드라마 순위">
+              <li>
+                <article class="poster-card">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="1위">1</span>
+                    <a class="poster-link" href="#" aria-label="먼가 작고 귀여운 녀석 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="494" alt="먼가 작고 귀여운 녀석">
+                    </a>
+                    <label class="wish" for="watcha-wish-drama-먼가 작고 귀여운 녀석">
+                      <input id="watcha-wish-drama-먼가 작고 귀여운 녀석" class="visually-hidden" type="checkbox" aria-label="먼가 작고 귀여운 녀석 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 class="movie-title">먼가 작고 귀여운 녀석</h3>
+                  <p class="movie-info">애니메이션 · 11부작</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.5</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="2위">2</span>
+                    <a class="poster-link" href="#" aria-label="매일, 휴일 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="494" alt="매일, 휴일">
+                    </a>
+                    <label class="wish" for="watcha-wish-drama-매일, 휴일">
+                      <input id="watcha-wish-drama-매일, 휴일" class="visually-hidden" type="checkbox" aria-label="매일, 휴일 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 class="movie-title">매일, 휴일</h3>
+                  <p class="movie-info">드라마 · 12부작</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.2</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="3위">3</span>
+                    <a class="poster-link" href="#" aria-label="닥터 X : 외과의 다이몬 미치코 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="494" alt="닥터 X : 외과의 다이몬 미치코">
+                    </a>
+                    <label class="wish" for="watcha-wish-drama-닥터 X : 외과의 다이몬 미치코">
+                      <input id="watcha-wish-drama-닥터 X : 외과의 다이몬 미치코" class="visually-hidden" type="checkbox" aria-label="닥터 X : 외과의 다이몬 미치코 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 class="movie-title">닥터 X : 외과의 다이몬 미치코</h3>
+                  <p class="movie-info">드라마 · 8부작</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.4</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="4위">4</span>
+                    <a class="poster-link" href="#" aria-label="막리: 그대와 영원히 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="494" alt="막리: 그대와 영원히">
+                    </a>
+                    <label class="wish" for="watcha-wish-drama-막리: 그대와 영원히">
+                      <input id="watcha-wish-drama-막리: 그대와 영원히" class="visually-hidden" type="checkbox" aria-label="막리: 그대와 영원히 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 class="movie-title">막리: 그대와 영원히</h3>
+                  <p class="movie-info">시대극 · 38부작</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.1</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                  </p>
+                </article>
+              </li>
+
+              <li>
+                <article class="poster-card">
+                  <div class="poster">
+                    <span class="rank-number" aria-label="5위">5</span>
+                    <a class="poster-link" href="#" aria-label="우림령 상세 정보 및 평점 보기">
+                      <img src="images/poster.jpg" width="464" height="494" alt="우림령">
+                    </a>
+                    <label class="wish" for="watcha-wish-drama-우림령">
+                      <input id="watcha-wish-drama-우림령" class="visually-hidden" type="checkbox" aria-label="우림령 찜하기">
+                      <span class="wish-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                  <h3 class="movie-title">우림령</h3>
+                  <p class="movie-info">시대극 · 25부작</p>
+                  <p class="rating">
+                    <span aria-hidden="true">★</span>
+                    <strong>4.3</strong>
+                    <span class="visually-hidden">/ 5점</span>
+                  </p>
+                </article>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </fieldset>
+    </section>
+
+    <!-- 인기 리뷰 -->
+    <section class="review-section" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container section">
+        <div class="section-heading">
+          <h2 id="reviews-heading">인기 리뷰</h2>
+          <a class="text-link" href="#review-list">리뷰 더 보기 <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="review-list" id="review-list">
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-author"><span class="avatar" aria-hidden="true">S</span><span>눈꽃산책</span></div>
+              <span class="stars" role="img" aria-label="별점 4점, 5점 만점">★★★★<span aria-hidden="true">★</span></span>
+            </div>
+            <h3><a href="#">오디세이</a></h3>
+            <p>많은 장면들이 오래 기억 남는 영화.</p>
+          </article>
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-author"><span class="avatar" aria-hidden="true">M</span><span>필름노트</span></div>
+              <span class="stars" role="img" aria-label="별점 4점, 5점 만점">★★★★<span aria-hidden="true">★</span></span>
+            </div>
+            <h3><a href="#">오디세이</a></h3>
+            <p>대서사시.</p>
+          </article>
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-author"><span class="avatar" aria-hidden="true">J</span><span>장면수집가</span></div>
+              <span class="stars" role="img" aria-label="별점 4점, 5점 만점">★★★★<span aria-hidden="true">★</span></span>
+            </div>
+            <h3><a href="#">타짜-벨제붑의 노래</a></h3>
+            <p>스포일러가 포함된 리뷰입니다.</p>
+            <details class="spoiler">
+              <summary>내용 펼쳐보기</summary>
+              <p>마지막 장면이 인상 깊었어요. 다시 보면 단서가 보이는 영화입니다.</p>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <a class="logo" href="#top"><img src="images/snowpedia-logo.png" width="1040" height="200" alt="snowpedia"></a>
+    <a class="text-link" href="#top">맨 위로 ↑</a>
+  </footer>
+</body>
+</html>
