@@ -140,8 +140,8 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .poster-link { display: block; }
 .poster-link:focus-visible { outline-offset: -4px; }
 .poster img { width: 100%; height: auto; aspect-ratio: 232 / 286; object-fit: cover; }
-.movie-title { margin: 11px 0 5px; font-size: 17px; overflow-wrap: anywhere; }
-.movie-info, .rating small { color: #647389; font-size: 12px; }
+.movie-title, .series-title { margin: 11px 0 5px; font-size: 17px; overflow-wrap: anywhere; }
+.movie-info, .series-info, .rating small { color: #647389; font-size: 12px; }
 .rating { margin-top: 8px; }
 .rating > span:first-child, .stars { color: #b86f00; }
 .poster-card > .rating { margin-bottom: auto; }
@@ -163,22 +163,22 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 #category-theater:checked ~ .rank-panels #panel-category-theater { display: block; }
 #category-netflix:checked ~ .rank-panels #panel-category-netflix { display: block; }
 #category-watcha:checked ~ .rank-panels #panel-category-watcha { display: block; }
-#drama-netflix:checked ~ .rank-panels #panel-drama-netflix { display: block; }
-#drama-watcha:checked ~ .rank-panels #panel-drama-watcha { display: block; }
+#series-netflix:checked ~ .rank-panels #panel-series-netflix { display: block; }
+#series-watcha:checked ~ .rank-panels #panel-series-watcha { display: block; }
 
 /* 선택한 버튼 색상 */
 #category-theater:checked ~ .category-menu label[for="category-theater"] { background: #003087; color: #fff; }
 #category-netflix:checked ~ .category-menu label[for="category-netflix"] { background: #003087; color: #fff; }
 #category-watcha:checked ~ .category-menu label[for="category-watcha"] { background: #003087; color: #fff; }
-#drama-netflix:checked ~ .category-menu label[for="drama-netflix"] { background: #003087; color: #fff; }
-#drama-watcha:checked ~ .category-menu label[for="drama-watcha"] { background: #003087; color: #fff; }
+#series-netflix:checked ~ .category-menu label[for="series-netflix"] { background: #003087; color: #fff; }
+#series-watcha:checked ~ .category-menu label[for="series-watcha"] { background: #003087; color: #fff; }
 
 /* 키보드로 선택한 버튼 */
 #category-theater:focus-visible ~ .category-menu label[for="category-theater"] { outline: 3px solid #003087; outline-offset: 3px; }
 #category-netflix:focus-visible ~ .category-menu label[for="category-netflix"] { outline: 3px solid #003087; outline-offset: 3px; }
 #category-watcha:focus-visible ~ .category-menu label[for="category-watcha"] { outline: 3px solid #003087; outline-offset: 3px; }
-#drama-netflix:focus-visible ~ .category-menu label[for="drama-netflix"] { outline: 3px solid #003087; outline-offset: 3px; }
-#drama-watcha:focus-visible ~ .category-menu label[for="drama-watcha"] { outline: 3px solid #003087; outline-offset: 3px; }
+#series-netflix:focus-visible ~ .category-menu label[for="series-netflix"] { outline: 3px solid #003087; outline-offset: 3px; }
+#series-watcha:focus-visible ~ .category-menu label[for="series-watcha"] { outline: 3px solid #003087; outline-offset: 3px; }
 
 /* 인기 리뷰 */
 .review-section { background: #f6f8fc; }
@@ -228,9 +228,9 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
   .section-heading h1, .section-heading h2 { font-size: 23px; }
   .poster-list { gap: 24px 16px; }
   .poster-list > li { flex-basis: calc((100% - 16px) / 2); }
-  .movie-title { font-size: 16px; }
+  .movie-title, .series-title { font-size: 16px; }
   .age-badge { left: 6px; padding: 3px 7px; font-size: 10px; }
   .wish { right: 6px; }
-  .movie-info, .rating small { font-size: 11px; }
+  .movie-info, .series-info, .rating small { font-size: 11px; }
   .review-list { gap: 14px; }
 }
