@@ -1,19 +1,5 @@
 @charset "UTF-8";
 
-/* ============================================
-   snowpedia 마이페이지 (프로토타입)
-   - 메인 페이지(snowpedia_main.css)와 디자인 통일
-   - 메인 색: #003087 (블루)
-   - 폰트: Nanum Gothic (구글폰트, HTML에서 link)
-   ============================================ */
-
-/* ===== 메인 페이지와 동일한 토큰 ===== */
-/*  글자색   #17283f
-    메인블루 #003087 / hover #002363
-    보조글자 #647389 , #78869a
-    테두리   #e4eaf2
-    연한배경 #f4f6f9 , #f6f8fc
-    별점골드 #b86f00                      */
 
 /* ===== 기본 설정 (메인과 동일) ===== */
 * { box-sizing: border-box; }
@@ -46,7 +32,7 @@ input, button, select, textarea { font: inherit; }
   max-width: 600px;
   margin: 32px auto;
   padding: 24px 16px;
-  border: 1px solid #78869a;
+  border: 1px solid #e4eaf2;
   border-radius: 20px;
   background-color: #fff;
 }
@@ -59,7 +45,7 @@ input, button, select, textarea { font: inherit; }
   
 }
 
-/* 첫 섹션(프로필) 위 여백 / 마지막 섹션(좋아요) 아래 여백 제거 */
+/* 첫 섹션 */
 .container > .section:first-child {
   padding-top: 0;
 }
@@ -67,7 +53,7 @@ input, button, select, textarea { font: inherit; }
   padding-bottom: 0;
 }
 
-/* 섹션 제목 줄 (메인의 .section-heading 와 동일) */
+/* 섹션 제목 줄 */
 .section-heading {
   display: flex;
   align-items: center;
@@ -230,6 +216,7 @@ input, button, select, textarea { font: inherit; }
   justify-content: center;
   gap: 40px;
   margin-top: 16px;
+  justify-content: space-around;
 }
 .library-item {
   display: flex;
@@ -253,6 +240,7 @@ input, button, select, textarea { font: inherit; }
   align-items: center;   /* 더보기 > 를 포스터 높이 기준 세로 가운데 */
   gap: 16px;
   margin-top: 16px;
+  justify-content: space-between;
 }
 .poster-card { width: 140px; }
 .poster {

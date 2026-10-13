@@ -14,9 +14,12 @@
     <header class="site-header" id="top">
         <div class="container header-inner"><a class="logo" href="snowpedia_main.html"><img alt="snowpedia"
                     src="images/snowpedia-logo.png" /></a>
-            <nav aria-label="주 메뉴" class="main-nav"><a href="snowpedia_main.html#discovery">영화·드라마</a><a
-                    aria-current="page" href="booking.html">영화관 예매</a><a href="snowpedia_main.html#reviews">리뷰</a><a
-                    href="mypage.html">내 보관함</a></nav>
+            <nav aria-label="주 메뉴" class="main-nav">
+                <a href="snowpedia_main.html">홈</a>
+                <a href="booking.html">영화관 예매</a>
+                <a href="#">리뷰</a>
+                <a href="mypage.html">마이페이지</a>
+            </nav>
             <div class="search-box" role="search"><label class="visually-hidden" for="site-search">작품명 검색</label><span
                     aria-hidden="true" class="search-icon"></span><input id="site-search"
                     placeholder="작품명, 배우, 감독을 검색해 보세요" type="search" /></div>
@@ -31,7 +34,7 @@
         <div class="booking-layout">
             <div class="booking-main">
                 <fieldset class="movie-picker">
-                    <legend>01. 영화 선택</legend>
+                    <legend>영화 선택</legend>
                     <!-- 영화별 링크 대상 -->
                     <span id="chiikawa" class="movie-target"></span>
                     <span id="odyssey" class="movie-target"></span>
@@ -71,7 +74,7 @@
                                         </div>
                                     </dl>
                                     <div class="mini-review">
-                                        <div class="review-title"><strong>관객 한줄평</strong><span>송이피디아 사용자 리뷰 예시</span>
+                                        <div class="review-title"><strong>관객 한줄평</strong><span>울랄라세션 · 메인 인기 리뷰</span>
                                         </div>
                                         <p>“아주 재밌었다. 또 보고 싶다. 너무 감동적이었다.”</p>
                                     </div>
@@ -81,7 +84,7 @@
                             </div>
                             <div class="option-grid">
                                 <fieldset class="option-group">
-                                    <legend>02. 영화관 지점 선택</legend>
+                                    <legend>영화관 지점 선택</legend>
                                     <div class="chips"><input checked="" class="visually-hidden chip-input"
                                             id="chiikawa-theater-0" name="chiikawa-theater" type="radio" /><label
                                             for="chiikawa-theater-0">CGV 용산아이파크몰</label><input
@@ -103,10 +106,9 @@
                                             천호</label><input class="visually-hidden chip-input" id="chiikawa-theater-8"
                                             name="chiikawa-theater" type="radio" /><label for="chiikawa-theater-8">CGV
                                             중계</label></div>
-                                    <p class="theater-note">※ 지점·특별관은 디자인 시연용이며 실제 상영 여부와 무관합니다.</p>
                                 </fieldset>
                                 <fieldset class="option-group format-group">
-                                    <legend>03. 상영관 종류 선택</legend>
+                                    <legend>상영관 종류 선택</legend>
                                     <div class="chips"><input checked="" class="visually-hidden chip-input"
                                             id="chiikawa-format-standard" name="chiikawa-format" type="radio" /><label
                                             for="chiikawa-format-standard">일반 2D</label><span
@@ -119,10 +121,9 @@
                                                 class="visually-hidden chip-input" id="chiikawa-format-screenx"
                                                 name="chiikawa-format" type="radio" /><label
                                                 for="chiikawa-format-screenx">SCREENX</label></span></div>
-                                    <p class="format-hint">용산아이파크몰 선택 시 IMAX·4DX·SCREENX 예시가 표시됩니다.</p>
                                 </fieldset>
                                 <fieldset class="option-group">
-                                    <legend>04. 상영시간 선택</legend>
+                                    <legend>상영시간 선택</legend>
                                     <div class="chips"><input class="visually-hidden chip-input" id="chiikawa-time-0"
                                             name="chiikawa-time" type="radio" /><label
                                             for="chiikawa-time-0">10:20</label><input checked=""
@@ -133,7 +134,7 @@
                                 </fieldset>
                             </div>
                             <fieldset class="seats-field">
-                                <legend>05. 좌석 선택</legend>
+                                <legend>좌석 선택</legend>
                                 <div class="screen">SCREEN</div>
                                 <div aria-label="좌석 배열" class="seat-map" role="group">
                                     <div class="seat-row"><span aria-hidden="true" class="row-label">A</span><input
@@ -308,7 +309,7 @@
                             </div>
                             <div class="option-grid">
                                 <fieldset class="option-group">
-                                    <legend>02. 영화관 지점 선택</legend>
+                                    <legend>영화관 지점 선택</legend>
                                     <div class="chips"><input checked="" class="visually-hidden chip-input"
                                             id="odyssey-theater-0" name="odyssey-theater" type="radio" /><label
                                             for="odyssey-theater-0">CGV 용산아이파크몰</label><input
@@ -330,7 +331,7 @@
                                             천호</label><input class="visually-hidden chip-input" id="odyssey-theater-8"
                                             name="odyssey-theater" type="radio" /><label for="odyssey-theater-8">CGV
                                             중계</label></div>
-                                    <p class="theater-note">※ 지점·특별관은 디자인 시연용이며 실제 상영 여부와 무관합니다.</p>
+                                    
                                 </fieldset>
                                 <fieldset class="option-group format-group">
                                     <legend>03. 상영관 종류 선택</legend>
@@ -346,7 +347,7 @@
                                                 class="visually-hidden chip-input" id="odyssey-format-screenx"
                                                 name="odyssey-format" type="radio" /><label
                                                 for="odyssey-format-screenx">SCREENX</label></span></div>
-                                    <p class="format-hint">용산아이파크몰 선택 시 IMAX·4DX·SCREENX 예시가 표시됩니다.</p>
+                                    
                                 </fieldset>
                                 <fieldset class="option-group">
                                     <legend>04. 상영시간 선택</legend>
@@ -360,7 +361,7 @@
                                 </fieldset>
                             </div>
                             <fieldset class="seats-field">
-                                <legend>05. 좌석 선택</legend>
+                                <legend>좌석 선택</legend>
                                 <div class="screen">SCREEN</div>
                                 <div aria-label="좌석 배열" class="seat-map" role="group">
                                     <div class="seat-row"><span aria-hidden="true" class="row-label">A</span><input
@@ -525,8 +526,8 @@
                                         </div>
                                     </dl>
                                     <div class="mini-review">
-                                        <div class="review-title"><strong>관객 한줄평</strong><span>리뷰 안내</span></div>
-                                        <p>아직 등록된 한줄평이 없습니다. 첫 리뷰를 남겨보세요.</p>
+                                        <div class="review-title"><strong>관객 한줄평</strong><span>버섯모둠 · 메인 인기 리뷰</span></div>
+                                        <p>지나가는 장면들 사이로 시대를 엿보다</p>
                                     </div>
                                     <a class="rating-link" href="rating_assassins.html">영화 평점·리뷰 더 보기 <span
                                             aria-hidden="true">→</span></a>
@@ -534,7 +535,7 @@
                             </div>
                             <div class="option-grid">
                                 <fieldset class="option-group">
-                                    <legend>02. 영화관 지점 선택</legend>
+                                    <legend>영화관 지점 선택</legend>
                                     <div class="chips"><input checked="" class="visually-hidden chip-input"
                                             id="assassins-theater-0" name="assassins-theater" type="radio" /><label
                                             for="assassins-theater-0">CGV 용산아이파크몰</label><input
@@ -557,10 +558,10 @@
                                             천호</label><input class="visually-hidden chip-input" id="assassins-theater-8"
                                             name="assassins-theater" type="radio" /><label for="assassins-theater-8">CGV
                                             중계</label></div>
-                                    <p class="theater-note">※ 지점·특별관은 디자인 시연용이며 실제 상영 여부와 무관합니다.</p>
+                                    
                                 </fieldset>
                                 <fieldset class="option-group format-group">
-                                    <legend>03. 상영관 종류 선택</legend>
+                                    <legend>상영관 종류 선택</legend>
                                     <div class="chips"><input checked="" class="visually-hidden chip-input"
                                             id="assassins-format-standard" name="assassins-format" type="radio" /><label
                                             for="assassins-format-standard">일반 2D</label><span
@@ -573,10 +574,10 @@
                                                 class="visually-hidden chip-input" id="assassins-format-screenx"
                                                 name="assassins-format" type="radio" /><label
                                                 for="assassins-format-screenx">SCREENX</label></span></div>
-                                    <p class="format-hint">용산아이파크몰 선택 시 IMAX·4DX·SCREENX 예시가 표시됩니다.</p>
+                                    
                                 </fieldset>
                                 <fieldset class="option-group">
-                                    <legend>04. 상영시간 선택</legend>
+                                    <legend>상영시간 선택</legend>
                                     <div class="chips"><input class="visually-hidden chip-input" id="assassins-time-0"
                                             name="assassins-time" type="radio" /><label
                                             for="assassins-time-0">09:40</label><input checked=""
@@ -589,7 +590,7 @@
                                 </fieldset>
                             </div>
                             <fieldset class="seats-field">
-                                <legend>05. 좌석 선택</legend>
+                                <legend>좌석 선택</legend>
                                 <div class="screen">SCREEN</div>
                                 <div aria-label="좌석 배열" class="seat-map" role="group">
                                     <div class="seat-row"><span aria-hidden="true" class="row-label">A</span><input
@@ -729,8 +730,7 @@
                         </section>
                     </div>
                 </fieldset>
-                <p class="credits-note">※ 감독·출연진 정보가 미기재된 작품은 팀의 최종 자료에 맞춰 수정해 주세요. 영화별 상영시간과 리뷰는 팀 메인 페이지의 예시 자료를
-                    사용했습니다.</p>
+
             </div>
             <aside class="booking-summary">
                 <h2>예매 안내</h2>
