@@ -201,8 +201,8 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .spoiler p { margin-top: 10px; padding-top: 10px; border-top: 1px solid #e4eaf2; }
 
 /* 푸터 */
-.site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 32px 0; }
-.site-footer .logo img { width: 172px; }
+.site-footer { margin-top: 30px; padding: 28px 20px; text-align: center; background: #f4f6f9; color: #6c7888; font-size: 12px; }
+.site-footer p { margin: 3px 0; }
 
 /* 태블릿 화면 */
 @media (max-width: 1050px) {

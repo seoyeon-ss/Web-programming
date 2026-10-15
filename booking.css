@@ -504,17 +504,8 @@ input:focus-visible+label {
     width: 100%
 }
 
-.site-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 32px 0;
-    border-top: 1px solid #e4eaf2
-}
-
-.site-footer .logo img {
-    width: 172px
-}
+.site-footer { margin-top: 30px; padding: 28px 20px; text-align: center; background: #f4f6f9; color: #6c7888; font-size: 12px; }
+.site-footer p { margin: 3px 0; }
 
 @media(max-width:1050px) {
     .header-inner {
