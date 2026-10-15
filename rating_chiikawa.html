@@ -9,7 +9,7 @@
   <title>극장판 치이카와: 인어 섬의 비밀 | 송이피디아</title>
   <link rel="stylesheet" href="rating.css">
 
- <!-- 구글폰트: 나눔고딕 -->
+  <!-- 구글폰트: 나눔고딕 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
@@ -17,17 +17,21 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-inner">
-      <a href="snowpedia_main.html" class="logo"><img src="images/snowpedia-logo.png" alt="Snowpedia 송이피디아"></a>
-      <nav class="main-nav">
+    <div class="container header-inner">
+      <a class="logo" href="snowpedia_main.html"><img src="images/snowpedia-logo.png" width="1040" height="200" alt="snowpedia"></a>
+      <nav class="main-nav" aria-label="주 메뉴">
         <a href="snowpedia_main.html">홈</a>
         <a href="booking.html">영화관 예매</a>
-        <a href="#">리뷰</a>
+        <a href="snowpedia_main.html#reviews">리뷰</a>
         <a href="mypage.html">마이페이지</a>
       </nav>
-      <div class="header-search">
-        <span>⌕</span>
-        <input type="text" placeholder="작품명, 배우, 감독을 검색해 보세요">
+      <div class="search-box" role="search">
+        <label class="visually-hidden" for="site-search">작품명, 배우, 감독 검색</label>
+        <span class="search-icon" aria-hidden="true"></span>
+        <input id="site-search" type="search" placeholder="작품명, 배우, 감독을 검색해 보세요">
+      </div>
+      <div class="account-links">
+        <a href="#">로그인</a><a class="button signup" href="#">회원가입</a>
       </div>
     </div>
   </header>
