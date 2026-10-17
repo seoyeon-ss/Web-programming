@@ -191,6 +191,12 @@ input:focus-visible+label {
     padding: 8px 14px
 }
 
+.signup:hover {
+    background: #0043b3;
+    color: #fff;
+    text-decoration: none;
+}
+
 .page-heading h1 {
     font-size: 28px
 }

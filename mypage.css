@@ -120,6 +120,11 @@ input, button, select, textarea { font: inherit; }
 }
 .button:hover { background: #002363; text-decoration: none; }
 .signup { padding: 8px 14px; }
+.signup:hover {
+  background: #0043b3;
+  color: #fff;
+  text-decoration: none;
+}
 
 /* 선형(테두리) 버튼 - 프로필수정/공유, 전체보기 등 */
 .button-line {
