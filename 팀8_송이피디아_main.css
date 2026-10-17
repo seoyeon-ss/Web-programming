@@ -5,19 +5,19 @@
 /* 나눔고딕 */
 @font-face {
   font-family: "Nanum Gothic";
-  src: url("fonts/NanumGothic-Regular.ttf") format("truetype");
+  src: url("fonts/팀8_NanumGothic-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Nanum Gothic";
-  src: url("fonts/NanumGothic-Bold.ttf") format("truetype");
+  src: url("fonts/팀8_NanumGothic-Bold.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Nanum Gothic";
-  src: url("fonts/NanumGothic-ExtraBold.ttf") format("truetype");
+  src: url("fonts/팀8_NanumGothic-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-display: swap;
 }
