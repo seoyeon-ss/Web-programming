@@ -55,7 +55,19 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   text-align: center;
 }
-.button:hover { background: #002363; text-decoration: none; }
+.button:hover { background: #0043b3; color: #fff; text-decoration: none; }
+
+/* 누를 수 있는 부분의 호버 효과 */
+.logo img, .main-nav a, .account-links a, .text-link,
+.category-menu label, .poster img, .wish-mark, .review-card h3 a,
+.spoiler summary {
+  transition: all 0.2s ease;
+}
+.logo:hover, .poster-link:hover { text-decoration: none; }
+.logo:hover img { opacity: 0.8; }
+.main-nav a:hover, .account-links a:not(.button):hover { color: #003087; text-decoration: underline; }
+.account-links .button:hover { color: #fff; }
+.text-link:hover, .review-card h3 a:hover, .spoiler summary:hover { color: #002363; }
 
 /* 숨김 글자와 키보드 표시 */
 a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid #003087; outline-offset: 4px; }
@@ -103,6 +115,7 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
   color: inherit;
   font-size: 12px;
 }
+.search-box input:hover { background: #eaf0f7; }
 .search-icon {
   position: absolute;
   top: 12px;
@@ -130,6 +143,7 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .rank-category {margin-top: 14px;}
 .category-menu { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .category-menu label { padding: 8px 16px; border-radius: 20px; background: #f4f6f9; cursor: pointer; font-size: 14px; }
+.category-menu label:hover { background: #e2eaf5; color: #003087; }
 .rank-panel { display: none; }
 
 /* 포스터 목록 */
@@ -140,6 +154,7 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .poster-link { display: block; }
 .poster-link:focus-visible { outline-offset: -4px; }
 .poster img { width: 100%; height: auto; aspect-ratio: 232 / 286; object-fit: cover; }
+.poster-link:hover img { transform: scale(1.04); }
 .movie-title, .series-title { margin: 11px 0 5px; font-size: 17px; overflow-wrap: anywhere; }
 .movie-info, .series-info, .rating small { color: #647389; font-size: 12px; }
 .rating { margin-top: 8px; }
@@ -158,6 +173,7 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .wish input:checked + .wish-mark { background: #003087; color: #fff; }
 .wish input:checked + .wish-mark::before { content: "✓"; font-size: 20px; }
 .wish input:focus-visible + .wish-mark { outline: 3px solid #003087; outline-offset: 3px; }
+.wish:hover .wish-mark { transform: scale(1.08); box-shadow: 0 3px 10px rgba(0, 48, 135, 0.25); }
 
 /* 선택한 목록만 보이기 */
 #category-theater:checked ~ .rank-panels #panel-category-theater { display: block; }
