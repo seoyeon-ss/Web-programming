@@ -103,6 +103,16 @@ a:focus-visible, input:focus-visible {
   text-decoration: underline;
 }
 
+.main-nav a:hover {
+  color: #003087;
+  text-decoration: underline;
+}
+
+.account-links a:not(.button):hover {
+  color: #003087;
+  text-decoration: underline;
+}
+
 .button {
   display: inline-block;
   padding: 9px 18px;

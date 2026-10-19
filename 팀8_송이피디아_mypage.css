@@ -171,6 +171,16 @@ input, button, select, textarea { font: inherit; }
   white-space: nowrap;
 }
 
+.main-nav a:hover {
+  color: #003087;
+  text-decoration: underline;
+}
+
+.account-links a:not(.button):hover {
+  color: #003087;
+  text-decoration: underline;
+}
+
 .search-box { position: relative; flex: 1; min-width: 170px; }
 .search-box input {
   width: 100%;
