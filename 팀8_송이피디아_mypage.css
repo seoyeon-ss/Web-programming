@@ -118,7 +118,7 @@ input, button, select, textarea { font: inherit; }
   cursor: pointer;
   border: none;
 }
-.button:hover { background: #002363; text-decoration: none; }
+.button:hover { background: #002363; color: #fff; text-decoration: none; }
 .signup { padding: 8px 14px; }
 .signup:hover {
   background: #0043b3;
@@ -126,19 +126,22 @@ input, button, select, textarea { font: inherit; }
   text-decoration: none;
 }
 
-/* 선형(테두리) 버튼 - 프로필수정/공유, 전체보기 등 */
+/* 회색 버튼 - 프로필 수정/공유, 전체보기 등 */
 .button-line {
   display: inline-block;
   padding: 8px 16px;
-  border: 1px solid #003087;
-  border-radius: 8px;
-  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  background: #f4f6f9;
   color: #003087;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
-.button-line:hover { background: #f4f6f9; }
+.button-line:hover {
+  background-color: #e2eaf5;
+}
 
 /* ===== 헤더 (메인과 동일) ===== */
 /* 흰 배경을 화면 전체 폭인 .site-header 에 적용 (끊김 해결) */
@@ -264,7 +267,7 @@ input, button, select, textarea { font: inherit; }
   width: 80px;
   height: 80px;
   padding: 0;
-  border: 1px solid #e4eaf2;
+  border: 0px solid #e4eaf2;
   background: #f4f6f9;
   cursor: pointer;
   border-radius: 50%;
@@ -307,21 +310,21 @@ input, button, select, textarea { font: inherit; }
   height: 60px;
   width: 60px;
   flex-shrink: 0;
-  border: 1px solid #003087;
-  background: #fff;
+  border: 0px solid #003087;
+  background: #f4f6f9;
   color: #003087;
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
   border-radius: 50%;
 }
-.btn-row:hover { background: #f4f6f9; }
+.btn-row:hover { background: #e2eaf5; transition: background-color 0.2s ease; }
 
 /* ===== 4. 최근의 코맨트 ===== */
 .comment-card {
   margin-top: 16px;
   padding: 16px;
-  border: 1px solid #e4eaf2;
+  border: 0px solid #e4eaf2;
   background: #f6f8fc;
   border-radius: 12px;
 }
@@ -379,17 +382,37 @@ input, button, select, textarea { font: inherit; }
   margin-right: auto;
   margin-left: auto;
 }
+
+.section-subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #003087;
+  background-color: #e2eaf5;
+  border-radius: 6px;
+  padding: 3px 8px;
+  box-sizing: border-box; 
+}
+.section-description {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 5px 0;
+}
 .rating-graph {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 6px;
-  height: 140px;
+  height: 70px;
   padding: 0 4px;
   margin-top: 16px;
   border-bottom: 1px solid #e4eaf2;
 }
 .rating-graph .bar {
+  flex: 1;
+  background: #e4eaf2;   /* 메인 블루 막대 */
+  border-radius: 4px 4px 0 0;
+}
+.rating-graph .most{
   flex: 1;
   background: #003087;   /* 메인 블루 막대 */
   border-radius: 4px 4px 0 0;

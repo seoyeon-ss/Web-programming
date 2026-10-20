@@ -706,7 +706,6 @@ input:focus-visible+label {
 .mini-review {
     padding: 10px 12px;
     background: #f6f8fc;
-    border-left: 3px solid #003087;
     border-radius: 7px
 }
 
