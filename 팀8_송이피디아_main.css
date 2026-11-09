@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/* 기본 설정 */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #fff;
+  color: #17283f;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+h1, h2, h3, p, ul { margin: 0; }
+h1, h2 { font-weight: 800; }
+ul { padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+input { font: inherit; }
+fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+summary { cursor: pointer; }
+
+/* 페이지 배치 */
+.container { width: calc(100% - 64px); max-width: 1248px; margin: 0 auto; }
+.section { padding: 44px 0; }
+.text-link, .review-card h3, .spoiler summary { color: #003087; }
+.text-link, .main-nav, .account-links { font-size: 14px; }
+a:hover { text-decoration: underline; }
+
+/* 공통 버튼 */
+.button {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 8px;
+  background: #003087;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+.button:hover { background: #0043b3; color: #fff; text-decoration: none; }
+
+/* 마우스 올림 효과 */
+.logo img, .main-nav a, .account-links a, .text-link,
+.category-menu label, .poster img, .wish-mark, .review-card h3 a,
+.spoiler summary {
+  transition: all 0.2s ease;
+}
+.logo:hover, .poster-link:hover { text-decoration: none; }
+.logo:hover img { opacity: 0.8; }
+.main-nav a:hover, .account-links a:not(.button):hover { color: #003087; text-decoration: underline; }
+.account-links .button:hover { color: #fff; }
+.text-link:hover, .review-card h3 a:hover, .spoiler summary:hover { color: #002363; }
+
+/* 숨김 요소와 키보드 선택 표시 */
+a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid #003087; outline-offset: 4px; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 16px;
+  z-index: 10;
+  padding: 10px 16px;
+  background: #fff;
+}
+.skip-link:focus { top: 10px; }
+
+/* 헤더 */
+.site-header { border-bottom: 1px solid #e4eaf2; }
+.header-inner { display: flex; align-items: center; gap: 20px; }
+.main-nav { display: flex; align-items: center; gap: 20px; }
+.account-links { display: flex; align-items: center; gap: 20px; }
+.review-top { display: flex; align-items: center; gap: 20px; }
+.review-author { display: flex; align-items: center; gap: 20px; }
+.header-inner { min-height: 80px; }
+.logo { display: inline-block; flex-shrink: 0; }
+.logo img { width: 194px; height: auto; }
+.main-nav, .account-links { white-space: nowrap; }
+.signup { padding: 8px 14px; }
+/* 검색창 */
+.search-box { position: relative; flex: 1; min-width: 170px; }
+.search-box input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px 0 39px;
+  border: 0;
+  border-radius: 22px;
+  background: #f4f6f9;
+  color: inherit;
+  font-size: 12px;
+}
+.search-box input:hover { background: #eaf0f7; }
+.search-icon {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #78869a;
+  border-radius: 50%;
+}
+.search-icon::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  bottom: -3px;
+  width: 6px;
+  height: 2px;
+  background: #78869a;
+  transform: rotate(45deg);
+}
+
+/* 순위 제목과 카테고리 */
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.section-heading h1, .section-heading h2 { font-size: 28px; line-height: 1.4; }
+.rank-section + .rank-section { border-top: 1px solid #e4eaf2; }
+.rank-category { margin-top: 14px; }
+.category-menu { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.category-menu label { padding: 8px 16px; border-radius: 20px; background: #f4f6f9; cursor: pointer; font-size: 14px; }
+.category-menu label:hover { background: #e2eaf5; color: #003087; }
+.rank-panel { display: none; }
+
+/* 포스터 목록 */
+.poster-list { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 24px; }
+.poster-list > li { flex: 0 0 calc((100% - 88px) / 5); min-width: 0; }
+.poster-card { display: flex; flex-direction: column; height: 100%; }
+.poster { position: relative; overflow: hidden; border-radius: 12px; }
+.poster-link { display: block; }
+.poster-link:focus-visible { outline-offset: -4px; }
+.poster img { width: 100%; height: auto; aspect-ratio: 232 / 286; object-fit: cover; }
+.poster-link:hover img { transform: scale(1.04); }
+.movie-title, .series-title { margin: 11px 0 5px; font-size: 17px; overflow-wrap: anywhere; }
+.movie-info, .series-info, .rating small { color: #647389; font-size: 12px; }
+.rating { margin-top: 8px; }
+.rating > span:first-child, .stars { color: #b86f00; }
+.poster-card > .rating { margin-bottom: auto; }
+.booking-button { margin-top: 14px; }
+.age-badge { position: absolute; top: 10px; left: 10px; padding: 3px 9px; border-radius: 16px; background: #fff; font-size: 11px; }
+.rank-number { position: absolute; bottom: 8px; left: 10px; z-index: 1; padding: 0 9px; border-radius: 6px; background: #003087; color: #fff; font-size: 24px; font-weight: 700; }
+.rank-number, .age-badge { pointer-events: none; }
+
+/* 찜 버튼 */
+.wish { position: absolute; top: 8px; right: 8px; cursor: pointer; }
+.wish-mark, .avatar { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #fff; }
+.wish-mark { font-size: 24px; }
+.wish-mark::before { content: "+"; }
+.wish input:checked + .wish-mark { background: #003087; color: #fff; }
+.wish input:checked + .wish-mark::before { content: "✓"; font-size: 20px; }
+.wish input:focus-visible + .wish-mark { outline: 3px solid #003087; outline-offset: 3px; }
+.wish:hover .wish-mark { transform: scale(1.08); box-shadow: 0 3px 10px rgba(0, 48, 135, 0.25); }
+
+/* 선택한 목록만 보이기 */
+#movie-theater:checked ~ .rank-panels #panel-movie-theater { display: block; }
+#movie-netflix:checked ~ .rank-panels #panel-movie-netflix { display: block; }
+#movie-watcha:checked ~ .rank-panels #panel-movie-watcha { display: block; }
+#series-netflix:checked ~ .rank-panels #panel-series-netflix { display: block; }
+#series-watcha:checked ~ .rank-panels #panel-series-watcha { display: block; }
+
+/* 선택한 버튼 색상 */
+#movie-theater:checked ~ .category-menu label[for="movie-theater"] { background: #003087; color: #fff; }
+#movie-netflix:checked ~ .category-menu label[for="movie-netflix"] { background: #003087; color: #fff; }
+#movie-watcha:checked ~ .category-menu label[for="movie-watcha"] { background: #003087; color: #fff; }
+#series-netflix:checked ~ .category-menu label[for="series-netflix"] { background: #003087; color: #fff; }
+#series-watcha:checked ~ .category-menu label[for="series-watcha"] { background: #003087; color: #fff; }
+
+/* 키보드로 선택한 버튼 */
+#movie-theater:focus-visible ~ .category-menu label[for="movie-theater"] { outline: 3px solid #003087; outline-offset: 3px; }
+#movie-netflix:focus-visible ~ .category-menu label[for="movie-netflix"] { outline: 3px solid #003087; outline-offset: 3px; }
+#movie-watcha:focus-visible ~ .category-menu label[for="movie-watcha"] { outline: 3px solid #003087; outline-offset: 3px; }
+#series-netflix:focus-visible ~ .category-menu label[for="series-netflix"] { outline: 3px solid #003087; outline-offset: 3px; }
+#series-watcha:focus-visible ~ .category-menu label[for="series-watcha"] { outline: 3px solid #003087; outline-offset: 3px; }
+
+/* 인기 리뷰 */
+.review-section { background: #f6f8fc; }
+.review-list { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 28px; }
+.review-card {
+  flex: 1 1 280px;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e4eaf2;
+  border-radius: 12px;
+  background: #fff;
+}
+.review-top { justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+.review-author { gap: 8px; font-size: 12px; }
+.avatar { color: #003087; background: #eef3fa; font-weight: 700; }
+.stars { font-size: 12px; white-space: nowrap; }
+.stars > span { color: #b9c2cf; }
+.review-card h3 { margin-bottom: 9px; font-size: 13px; }
+.review-card > p, .spoiler { font-size: 14px; }
+.spoiler p { margin-top: 10px; padding-top: 10px; border-top: 1px solid #e4eaf2; }
+
+/* 푸터 */
+.site-footer { margin-top: 30px; padding: 28px 20px; text-align: center; background: #f4f6f9; color: #6c7888; font-size: 12px; }
+.site-footer p { margin: 3px 0; }
