@@ -1,27 +1,5 @@
 @charset "UTF-8";
 
-/* snowpedia 메인 페이지 */
-
-/* 나눔고딕 */
-@font-face {
-  font-family: "Nanum Gothic";
-  src: url("fonts/팀8_NanumGothic-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Nanum Gothic";
-  src: url("fonts/팀8_NanumGothic-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Nanum Gothic";
-  src: url("fonts/팀8_NanumGothic-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-display: swap;
-}
-
 /* 기본 설정 */
 * { box-sizing: border-box; }
 body {
@@ -37,14 +15,18 @@ h1, h2 { font-weight: 800; }
 ul { padding: 0; list-style: none; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
-input, button, select, textarea { font: inherit; }
+input { font: inherit; }
 fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
 summary { cursor: pointer; }
+
+/* 페이지 배치 */
 .container { width: calc(100% - 64px); max-width: 1248px; margin: 0 auto; }
 .section { padding: 44px 0; }
 .text-link, .review-card h3, .spoiler summary { color: #003087; }
 .text-link, .main-nav, .account-links { font-size: 14px; }
 a:hover { text-decoration: underline; }
+
+/* 공통 버튼 */
 .button {
   display: inline-block;
   padding: 9px 18px;
@@ -57,7 +39,7 @@ a:hover { text-decoration: underline; }
 }
 .button:hover { background: #0043b3; color: #fff; text-decoration: none; }
 
-/* 누를 수 있는 부분의 호버 효과 */
+/* 마우스 올림 효과 */
 .logo img, .main-nav a, .account-links a, .text-link,
 .category-menu label, .poster img, .wish-mark, .review-card h3 a,
 .spoiler summary {
@@ -69,7 +51,7 @@ a:hover { text-decoration: underline; }
 .account-links .button:hover { color: #fff; }
 .text-link:hover, .review-card h3 a:hover, .spoiler summary:hover { color: #002363; }
 
-/* 숨김 글자와 키보드 표시 */
+/* 숨김 요소와 키보드 선택 표시 */
 a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid #003087; outline-offset: 4px; }
 .visually-hidden {
   position: absolute;
@@ -104,6 +86,7 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .logo img { width: 194px; height: auto; }
 .main-nav, .account-links { white-space: nowrap; }
 .signup { padding: 8px 14px; }
+/* 검색창 */
 .search-box { position: relative; flex: 1; min-width: 170px; }
 .search-box input {
   width: 100%;
@@ -140,7 +123,7 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .section-heading h1, .section-heading h2 { font-size: 28px; line-height: 1.4; }
 .rank-section + .rank-section { border-top: 1px solid #e4eaf2; }
-.rank-category {margin-top: 14px;}
+.rank-category { margin-top: 14px; }
 .category-menu { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .category-menu label { padding: 8px 16px; border-radius: 20px; background: #f4f6f9; cursor: pointer; font-size: 14px; }
 .category-menu label:hover { background: #e2eaf5; color: #003087; }
@@ -176,23 +159,23 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .wish:hover .wish-mark { transform: scale(1.08); box-shadow: 0 3px 10px rgba(0, 48, 135, 0.25); }
 
 /* 선택한 목록만 보이기 */
-#category-theater:checked ~ .rank-panels #panel-category-theater { display: block; }
-#category-netflix:checked ~ .rank-panels #panel-category-netflix { display: block; }
-#category-watcha:checked ~ .rank-panels #panel-category-watcha { display: block; }
+#movie-theater:checked ~ .rank-panels #panel-movie-theater { display: block; }
+#movie-netflix:checked ~ .rank-panels #panel-movie-netflix { display: block; }
+#movie-watcha:checked ~ .rank-panels #panel-movie-watcha { display: block; }
 #series-netflix:checked ~ .rank-panels #panel-series-netflix { display: block; }
 #series-watcha:checked ~ .rank-panels #panel-series-watcha { display: block; }
 
 /* 선택한 버튼 색상 */
-#category-theater:checked ~ .category-menu label[for="category-theater"] { background: #003087; color: #fff; }
-#category-netflix:checked ~ .category-menu label[for="category-netflix"] { background: #003087; color: #fff; }
-#category-watcha:checked ~ .category-menu label[for="category-watcha"] { background: #003087; color: #fff; }
+#movie-theater:checked ~ .category-menu label[for="movie-theater"] { background: #003087; color: #fff; }
+#movie-netflix:checked ~ .category-menu label[for="movie-netflix"] { background: #003087; color: #fff; }
+#movie-watcha:checked ~ .category-menu label[for="movie-watcha"] { background: #003087; color: #fff; }
 #series-netflix:checked ~ .category-menu label[for="series-netflix"] { background: #003087; color: #fff; }
 #series-watcha:checked ~ .category-menu label[for="series-watcha"] { background: #003087; color: #fff; }
 
 /* 키보드로 선택한 버튼 */
-#category-theater:focus-visible ~ .category-menu label[for="category-theater"] { outline: 3px solid #003087; outline-offset: 3px; }
-#category-netflix:focus-visible ~ .category-menu label[for="category-netflix"] { outline: 3px solid #003087; outline-offset: 3px; }
-#category-watcha:focus-visible ~ .category-menu label[for="category-watcha"] { outline: 3px solid #003087; outline-offset: 3px; }
+#movie-theater:focus-visible ~ .category-menu label[for="movie-theater"] { outline: 3px solid #003087; outline-offset: 3px; }
+#movie-netflix:focus-visible ~ .category-menu label[for="movie-netflix"] { outline: 3px solid #003087; outline-offset: 3px; }
+#movie-watcha:focus-visible ~ .category-menu label[for="movie-watcha"] { outline: 3px solid #003087; outline-offset: 3px; }
 #series-netflix:focus-visible ~ .category-menu label[for="series-netflix"] { outline: 3px solid #003087; outline-offset: 3px; }
 #series-watcha:focus-visible ~ .category-menu label[for="series-watcha"] { outline: 3px solid #003087; outline-offset: 3px; }
 
@@ -219,34 +202,3 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 /* 푸터 */
 .site-footer { margin-top: 30px; padding: 28px 20px; text-align: center; background: #f4f6f9; color: #6c7888; font-size: 12px; }
 .site-footer p { margin: 3px 0; }
-
-/* 태블릿 화면 */
-@media (max-width: 1050px) {
-  .header-inner { flex-wrap: wrap; gap: 16px; padding: 16px 0; }
-  .main-nav { margin-left: auto; }
-  .search-box { order: 3; flex-basis: 60%; }
-  .account-links { order: 4; margin-left: auto; }
-  .poster-list > li { flex-basis: calc((100% - 44px) / 3); }
-}
-
-/* 모바일 화면 */
-@media (max-width: 650px) {
-  .container { width: calc(100% - 32px); }
-  .section { padding: 32px 0; }
-  #now-showing { padding-top: 40px; }
-  .header-inner { gap: 14px 12px; }
-  .logo img { width: 158px; }
-  .account-links { order: 0; gap: 10px; font-size: 12px; }
-  .signup { padding: 6px 9px; font-size: 12px; }
-  .main-nav { order: 2; width: 100%; gap: 8px; justify-content: space-between; font-size: 12px; }
-  .search-box { flex-basis: 100%; }
-  .section-heading { align-items: flex-start; flex-direction: column; gap: 14px; }
-  .section-heading h1, .section-heading h2 { font-size: 23px; }
-  .poster-list { gap: 24px 16px; }
-  .poster-list > li { flex-basis: calc((100% - 16px) / 2); }
-  .movie-title, .series-title { font-size: 16px; }
-  .age-badge { left: 6px; padding: 3px 7px; font-size: 10px; }
-  .wish { right: 6px; }
-  .movie-info, .series-info, .rating small { font-size: 11px; }
-  .review-list { gap: 14px; }
-}

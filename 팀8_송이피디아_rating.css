@@ -1,23 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: "Nanum Gothic";
-  src: url("fonts/팀8_NanumGothic-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Nanum Gothic";
-  src: url("fonts/팀8_NanumGothic-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Nanum Gothic";
-  src: url("fonts/팀8_NanumGothic-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-display: swap;
-}
 /* 기본 설정 */
 * {
   box-sizing: border-box;
@@ -42,7 +24,7 @@ img {
   max-width: 100%;
 }
 
-input, button, select, textarea {
+input {
   font: inherit;
 }
 
@@ -113,6 +95,7 @@ a:focus-visible, input:focus-visible {
   text-decoration: underline;
 }
 
+/* 공통 버튼 */
 .button {
   display: inline-block;
   padding: 9px 18px;
@@ -133,6 +116,7 @@ a:focus-visible, input:focus-visible {
   padding: 8px 14px;
 }
 
+/* 검색창 */
 .search-box {
   position: relative;
   flex: 1;
@@ -309,11 +293,6 @@ a:focus-visible, input:focus-visible {
   font-weight: bold;
 }
 
-.booking-button .action-icon {
-  color: #fff;
-  font-size: 18px;
-}
-
 .booking-button:hover {
   color: #fff;
   background: #0043b3;
@@ -364,6 +343,7 @@ a:focus-visible, input:focus-visible {
   color: #526176;
 }
 
+/* 감독 및 출연진 */
 .cast-list {
   display: flex;
   gap: 20px;
@@ -558,93 +538,4 @@ a:focus-visible, input:focus-visible {
 
 .site-footer p {
   margin: 3px 0;
-}
-
-/* 태블릿 헤더: 메인 페이지와 동일 */
-@media (max-width: 1050px) {
-  .header-inner {
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 16px 0;
-  }
-
-  .main-nav {
-    margin-left: auto;
-  }
-
-  .search-box {
-    order: 3;
-    flex-basis: 60%;
-  }
-
-  .account-links {
-    order: 4;
-    margin-left: auto;
-  }
-}
-
-/* 작은 화면의 영화 정보 */
-@media (max-width: 800px) {
-  .movie-hero {
-    height: 280px;
-  }
-
-  .hero-content, .movie-container {
-    width: calc(100% - 32px);
-  }
-
-  .hero-content h1 {
-    font-size: 25px;
-  }
-
-  .movie-summary {
-    gap: 18px;
-  }
-
-  .poster-wrap {
-    width: 150px;
-  }
-
-  .action-row {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-}
-
-/* 모바일 헤더: 메인 페이지와 동일 */
-@media (max-width: 650px) {
-  .container {
-    width: calc(100% - 32px);
-  }
-
-  .header-inner {
-    gap: 14px 12px;
-  }
-
-  .logo img {
-    width: 158px;
-  }
-
-  .account-links {
-    order: 0;
-    gap: 10px;
-    font-size: 12px;
-  }
-
-  .signup {
-    padding: 6px 9px;
-    font-size: 12px;
-  }
-
-  .main-nav {
-    order: 2;
-    width: 100%;
-    gap: 8px;
-    justify-content: space-between;
-    font-size: 12px;
-  }
-
-  .search-box {
-    flex-basis: 100%;
-  }
 }

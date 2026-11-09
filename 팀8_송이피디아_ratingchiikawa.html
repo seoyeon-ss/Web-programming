@@ -9,25 +9,26 @@
   <title>극장판 치이카와: 인어 섬의 비밀 | 송이피디아</title>
   <link rel="stylesheet" href="팀8_송이피디아_rating.css">
 
-  <!-- 구글폰트: 나눔고딕 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
 
 </head>
 <body>
+  <!-- 헤더 -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="팀8_송이피디아_main.html"><img src="images/팀8_snowpedia-logo.png" width="1040" height="200" alt="snowpedia"></a>
-      <nav class="main-nav" aria-label="주 메뉴">
+      <nav class="main-nav">
         <a href="팀8_송이피디아_main.html">홈</a>
         <a href="팀8_송이피디아_booking.html">영화예매</a>
         <a href="팀8_송이피디아_main.html#reviews">리뷰</a>
         <a href="팀8_송이피디아_mypage.html">마이페이지</a>
       </nav>
+      <!-- 검색창 -->
       <div class="search-box" role="search">
         <label class="visually-hidden" for="site-search">작품명, 배우, 감독 검색</label>
-        <span class="search-icon" aria-hidden="true"></span>
+        <span class="search-icon"></span>
         <input id="site-search" type="search" placeholder="작품명, 배우, 감독을 검색해 보세요">
       </div>
       <div class="account-links">
@@ -36,8 +37,9 @@
     </div>
   </header>
 
+  <!-- 영화 배경과 제목 -->
   <section class="movie-hero">
-    <img src="images/팀8_chiikawa_bg.png" alt="극장판 치이카와: 인어 섬의 비밀 배경 이미지">
+    <img src="images/팀8_chiikawa_bg.png" alt="">
     <div class="hero-overlay">
       <div class="hero-content">
         <p class="hero-small">영화 상세 정보</p>
@@ -50,14 +52,15 @@
   </section>
 
   <main class="movie-container">
+    <!-- 영화 평점과 예매 -->
     <section class="movie-summary">
       <div class="poster-wrap">
-        <img src="images/팀8_chiikawa_poster.png" alt="극장판 치이카와: 인어 섬의 비밀 영화 포스터">
+        <img src="images/팀8_chiikawa_poster.png" alt="치이카와 포스터">
       </div>
       <div class="movie-main-info">
         <div class="rating-number">3.7</div>
         <p class="rating-label">평균 별점</p>
-        <div class="stars" aria-label="별점">★ ★ ★ ★ ☆</div>
+        <div class="stars">★ ★ ★ ★ ☆</div>
         <div class="action-row">
           <a href="#" class="action-button"><span class="action-icon">♡</span><span>보고 싶어요</span></a>
           <a href="#" class="action-button"><span class="action-icon">✎</span><span>코멘트</span></a>
@@ -71,52 +74,56 @@
       </div>
     </section>
 
+    <!-- 영화 정보 -->
     <section class="content-section">
       <div class="section-title-row"><h2>영화 정보</h2></div>
       <p class="description">어느 날, 광장에서 쉬고 있던 치이카와와 가르마 앞에 얼굴에 전단지를 붙인 토끼가 나타난다. 그곳엔 “특별한 섬으로의 초대”라는 글귀가 적혀 있는데...
         “섬에서 간단한 토벌만 해도 보수 100배!”
         “한정 섬라멘과 한정 디저트까지, 달콤한 것도 매콤한 것도 사실상 무료”
-        
+
         솔깃한 문구에 이끌린 치이카와와 친구들은 섬에서 열리는 행사에 참가하기로 한다. 초대장의 내용이 어딘가 수상하다고 느끼는 해달과, 부푼 마음으로 배에 오르는 치이카와와 친구들.
         모두가 기대를 안은 채 특별한 섬에 도착하는데!
         과연 그 섬에는 어떤 비밀이 숨겨져 있을까...?!</p>
     </section>
 
+    <!-- 감독 및 출연진 -->
     <section class="content-section">
       <div class="section-title-row"><h2>감독 및 출연진</h2></div>
       <div class="cast-list">
         <div class="cast-card">
-          <img class="cast-photo" src="images/팀8_heo_jin_ho.png" alt="아오키 하루카 사진">
+          <img class="cast-photo" src="images/팀8_heo_jin_ho.png" alt="인물 사진">
           <p class="cast-name">아오키 하루카</p>
           <p class="cast-role">성우 · 치이카와</p>
         </div>
         <div class="cast-card">
-          <img class="cast-photo" src="images/팀8_heo_jin_ho.png" alt="다나카 마사토 사진">
+          <img class="cast-photo" src="images/팀8_heo_jin_ho.png" alt="인물 사진">
           <p class="cast-name">다나카 마사토</p>
           <p class="cast-role">성우 · 하치와레</p>
         </div>
         <div class="cast-card">
-          <img class="cast-photo" src="images/팀8_heo_jin_ho.png" alt="오자와 아리 사진">
+          <img class="cast-photo" src="images/팀8_heo_jin_ho.png" alt="인물 사진">
           <p class="cast-name">오자와 아리</p>
           <p class="cast-role">성우 · 우사기</p>
         </div>
       </div>
     </section>
 
-    <section class="content-section rating-section">
-      <div class="section-title-row"><h2>평점</h2><span class="rating-count">관객 평점</span></div>
+    <!-- 관객 평점 -->
+    <section class="content-section">
+      <div class="section-title-row"><h2>평점</h2><span>관객 평점</span></div>
       <div class="rating-content">
         <div class="big-rating"><strong>3.7</strong><div class="stars small-stars">★ ★ ★ ★ ☆</div></div>
-        <div class="rating-graph" aria-label="평점 분포">
+        <div class="rating-graph">
           <div class="graph-row"><span>5</span><div class="bar"><i class="bar-3"></i></div></div>
           <div class="graph-row"><span>4</span><div class="bar"><i class="bar-5"></i></div></div>
-          <div class="graph-row"><span>3</span><div class="bar"><i class="bar-4.5"></i></div></div>
+          <div class="graph-row"><span>3</span><div class="bar"><i></i></div></div>
           <div class="graph-row"><span>2</span><div class="bar"><i class="bar-2"></i></div></div>
           <div class="graph-row"><span>1</span><div class="bar"><i class="bar-1"></i></div></div>
         </div>
       </div>
     </section>
 
+<!-- 코멘트 -->
 <section class="review-section">
     <h2>코멘트</h2>
 
@@ -153,7 +160,8 @@
     </div>
 </section>
 
-    <section class="content-section my-rating">
+    <!-- 내 평점 -->
+    <section class="content-section">
       <div class="section-title-row"><h2>내 평점</h2></div>
       <div class="my-rating-box">
         <div class="my-stars">☆ ☆ ☆ ☆ ☆</div>
@@ -162,6 +170,7 @@
       </div>
     </section>
 
+    <!-- 비슷한 영화 -->
     <section class="content-section">
       <div class="section-title-row"><h2>이 영화를 좋아한다면</h2><a href="#">다른 영화 보기 ›</a></div>
       <div class="similar-list">
@@ -176,6 +185,7 @@
       </div>
     </section>
   </main>
+  <!-- 푸터 -->
   <footer class="site-footer">
     <p>8조 송이피디아</p>
     <p>영화 탐색부터 평점, 예매까지 한 곳에서</p>
