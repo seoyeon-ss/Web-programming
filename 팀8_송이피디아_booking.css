@@ -34,7 +34,8 @@ img {
     max-width: 100%;
 }
 
-input {
+input,
+button {
     font: inherit;
 }
 
@@ -59,10 +60,12 @@ input {
     font-size: 14px;
     font-weight: 700;
     text-align: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .button:hover {
-    background: #002363;
+    background: #0043b3;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -91,13 +94,6 @@ input {
 
 .skip-link:focus {
     top: 10px;
-}
-
-/* 키보드 선택 표시 */
-a:focus-visible,
-input:focus-visible+label {
-    outline: 3px solid #003087;
-    outline-offset: 3px;
 }
 
 /* 헤더 */
@@ -154,6 +150,7 @@ input:focus-visible+label {
     border: 0;
     border-radius: 22px;
     background: #f4f6f9;
+    color: #17283f;
     color: inherit;
     font-size: 12px;
 }
@@ -192,6 +189,8 @@ input:focus-visible+label {
 /* 페이지 제목 */
 .page-heading h1 {
     font-size: 28px;
+    font-weight: 800;
+    line-height: 1.4;
 }
 
 /* 예매 화면 배치 */
@@ -202,10 +201,8 @@ input:focus-visible+label {
     margin-top: 28px;
 }
 
-.booking-main,
-.booking-summary {
-    border: 1px solid #e4eaf2;
-    border-radius: 20px;
+.booking-main {
+    border-top: 1px solid #e4eaf2;
     padding: 24px;
 }
 
@@ -220,8 +217,7 @@ input:focus-visible+label {
     margin: 0;
 }
 
-.movie-picker>legend,
-.booking-summary h2 {
+.movie-picker>legend {
     font-size: 20px;
     font-weight: 800;
     margin-bottom: 18px;
@@ -239,23 +235,22 @@ input:focus-visible+label {
 .chips label {
     display: inline-block;
     padding: 9px 14px;
-    border: 1px solid #e4eaf2;
+    border: 0;
     border-radius: 22px;
     background: #f4f6f9;
     font-size: 13px;
     cursor: pointer;
-    transition: background .15s, box-shadow .15s;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .chips label:hover {
-    border-color: #003087;
+    background: #e2eaf5;
 }
 
 /* 선택한 옵션 표시 */
 .chip-input:checked+label {
     background: #003087;
     color: white;
-    border-color: #003087;
 }
 
 /* 영화별 예매 화면 */
@@ -300,31 +295,53 @@ input:focus-visible+label {
 /* 예매 옵션 배치 */
 .option-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    border-bottom: 1px solid #e4eaf2;
 }
 
 .option-group {
-    padding: 16px;
-    background: #f9fbfd;
-    border: 1px solid #e4eaf2;
-    border-radius: 14px;
+    padding: 24px 0;
 }
 
 .option-group legend {
+    float: left;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 0;
+    font-size: 15px;
     font-weight: 800;
-    padding: 0 0 8px;
+    line-height: 1.6;
+}
+
+.option-group .chips {
+    clear: both;
+}
+
+.option-group:nth-child(2) {
+    padding-right: 24px;
+}
+
+.option-group:nth-child(3) {
+    position: relative;
+    padding-left: 24px;
+}
+
+.option-group:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    bottom: 24px;
+    left: 0;
+    width: 1px;
+    background: #e4eaf2;
+    pointer-events: none;
 }
 
 .chips {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
-}
-
-.chips label {
-    background: white;
-    color: #17283f;
 }
 
 .seats-field {
@@ -389,6 +406,11 @@ input:focus-visible+label {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    transition: filter 0.2s ease;
+}
+
+.seat-checkbox:not(:disabled)+.seat:hover {
+    filter: brightness(0.94);
 }
 
 .seat span {
@@ -476,21 +498,200 @@ input:focus-visible+label {
     background: #d6dde7;
 }
 
-/* 예매 안내 */
-.summary-card {
-    background: #f6f8fc;
-    border: 1px solid #e4eaf2;
-    border-radius: 16px;
-    padding: 20px;
+/* 결제정보 상단 고정 */
+.booking-summary {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    min-width: 0;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    border-radius: 18px;
+    filter: drop-shadow(0 8px 14px rgba(23, 40, 63, .08));
 }
 
-.summary-card p+p {
-    margin-top: 12px;
+/* 영화 티켓 */
+.payment-ticket {
+    --ticket-notch-radius: 14px;
+    overflow: hidden;
+    border-radius: 18px;
 }
 
-.help {
-    font-size: 13px;
+.ticket-heading {
+    padding: 20px 22px 18px;
+    border: 1px solid #dce4f0;
+    border-bottom: 0;
+    border-radius: 18px 18px 0 0;
+    background: #003087;
+    color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+.ticket-heading:hover {
+    background: #0043b3;
+}
+
+.ticket-brand span:last-child {
+    color: #ccdafa;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.ticket-heading h2 {
+    margin-top: 10px;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+/* 예매내역 */
+.ticket-body {
+    padding: 22px;
+    border-inline: 1px solid #dce4f0;
+}
+
+.ticket-movie {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4eaf2;
+}
+
+.ticket-movie img {
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.ticket-age {
+    color: #527551;
+    font-size: 11px;
+}
+
+.ticket-movie h3 {
+    margin: 5px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.ticket-details {
+    display: grid;
+    gap: 12px;
+    margin: 20px 0 0;
+    font-size: 12px;
+}
+
+.ticket-details > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.ticket-details dt {
+    flex-shrink: 0;
+    color: #78869a;
+}
+
+.ticket-details dd {
+    margin: 0;
+    text-align: right;
+    font-weight: 700;
+}
+
+.ticket-seat {
+    display: inline-block;
+    min-width: 32px;
+    margin-left: 5px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    background: #e8effa;
+    color: #003087;
+    text-align: center;
+}
+
+/* 티켓 절취선 */
+.ticket-body,
+.ticket-payment {
+    --ticket-notch-y: 100%;
+    background-color: #f8faff;
+    background-origin: border-box;
+
+    background-image:
+        radial-gradient(circle at 0 var(--ticket-notch-y),
+            transparent var(--ticket-notch-radius),
+            #dce4f0 calc(var(--ticket-notch-radius) + 0.5px),
+            #dce4f0 calc(var(--ticket-notch-radius) + 1px),
+            transparent calc(var(--ticket-notch-radius) + 1.5px)),
+        radial-gradient(circle at 100% var(--ticket-notch-y),
+            transparent var(--ticket-notch-radius),
+            #dce4f0 calc(var(--ticket-notch-radius) + 0.5px),
+            #dce4f0 calc(var(--ticket-notch-radius) + 1px),
+            transparent calc(var(--ticket-notch-radius) + 1.5px));
+    -webkit-mask-image:
+        radial-gradient(circle at 0 var(--ticket-notch-y), transparent var(--ticket-notch-radius), #000 calc(var(--ticket-notch-radius) + 0.5px)),
+        radial-gradient(circle at 100% var(--ticket-notch-y), transparent var(--ticket-notch-radius), #000 calc(var(--ticket-notch-radius) + 0.5px));
+    -webkit-mask-composite: source-in;
+    mask-image:
+        radial-gradient(circle at 0 var(--ticket-notch-y), transparent var(--ticket-notch-radius), #000 calc(var(--ticket-notch-radius) + 0.5px)),
+        radial-gradient(circle at 100% var(--ticket-notch-y), transparent var(--ticket-notch-radius), #000 calc(var(--ticket-notch-radius) + 0.5px));
+    mask-composite: intersect;
+}
+
+.ticket-payment {
+    --ticket-notch-y: 0%;
+    position: relative;
+    padding: 22px 22px 18px;
+    border: 1px solid #dce4f0;
+    border-top: 1px dashed #b8c8df;
+    border-radius: 0 0 18px 18px;
+}
+
+/* 결제금액과 버튼 */
+.ticket-price,
+.ticket-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.ticket-price {
     color: #647389;
+    font-size: 12px;
+}
+
+.ticket-total {
+    margin-top: 12px;
+    color: #003087;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ticket-total strong {
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+.ticket-total strong span {
+    margin-left: 3px;
+    font-size: 14px;
+}
+
+.ticket-pay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px 16px;
+    border: 0;
+    cursor: pointer;
+}
+
+.ticket-pay:focus-visible {
+    outline: 3px solid #003087;
+    outline-offset: 3px;
 }
 
 /* 푸터 */
@@ -638,6 +839,7 @@ input:focus-visible+label {
 /* 영화관 선택 영역 */
 .option-grid .option-group:first-child {
     grid-column: 1 / -1;
+    border-bottom: 1px solid #e4eaf2;
 }
 
 /* 특별관 선택 */
@@ -668,8 +870,13 @@ input:focus-visible+label {
     border-radius: 24px;
     background: #f4f6f9;
     color: #17283f;
-    border: 1px solid #e4eaf2;
+    border: 0;
     text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.movie-tabs a:hover {
+    background: #e2eaf5;
 }
 
 /* 기본 영화 표시 */
@@ -691,5 +898,12 @@ body:has(#odyssey:target) .movie-tabs a[href="#odyssey"],
 body:has(#assassins:target) .movie-tabs a[href="#assassins"] {
     background: #003087;
     color: #fff;
-    border-color: #003087;
+}
+
+/* 선택한 영화 티켓 표시 */
+body:not(:has(.movie-target:target)) .chiikawa-ticket,
+body:has(#chiikawa:target) .chiikawa-ticket,
+body:has(#odyssey:target) .odyssey-ticket,
+body:has(#assassins:target) .assassins-ticket {
+    display: flex;
 }

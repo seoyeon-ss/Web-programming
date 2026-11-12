@@ -105,10 +105,11 @@ a:focus-visible, input:focus-visible {
   font-size: 14px;
   font-weight: 700;
   text-align: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .site-header .button:hover {
-  background: #002363;
+  background: #0043b3;
   text-decoration: none;
 }
 
@@ -271,15 +272,17 @@ a:focus-visible, input:focus-visible {
   gap: 4px;
   color: #526176;
   font-size: 12px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .action-icon {
   font-size: 22px;
   color: #003087;
+  transition: color 0.2s ease;
 }
 
 .action-button:hover, .action-button:hover .action-icon {
-  color: #0053c7;
+  color: #0043b3;
 }
 
 .booking-button {
@@ -503,6 +506,13 @@ a:focus-visible, input:focus-visible {
   color: #fff;
   border-radius: 8px;
   font-size: 13px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.comment-button:hover {
+  background: #0043b3;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* 비슷한 영화 */

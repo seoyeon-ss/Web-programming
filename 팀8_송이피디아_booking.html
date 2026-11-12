@@ -1,665 +1,980 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width,initial-scale=1" name="viewport" />
-    <meta content="민예원, 심서연, 정아윤, 김영서" name="author" />
-    <meta name="team" content="8조 송이피디아">
-    <meta name="description" content="영화 평점, 리뷰 및 영화관 좌석 예매 서비스를 제공하는 송이피디아 웹사이트">
-    <title>영화 예매 - snowpedia</title>
-    <link href="팀8_송이피디아_booking.css" rel="stylesheet" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-    <a class="skip-link" href="#main">본문 바로가기</a>
-    <!-- 헤더 -->
-    <header class="site-header">
-        <div class="container header-inner"><a class="logo" href="팀8_송이피디아_main.html"><img
-                    src="images/팀8_snowpedia-logo.png" alt="snowpedia" /></a>
-            <nav class="main-nav">
-                <a href="팀8_송이피디아_main.html">홈</a>
-                <a href="팀8_송이피디아_booking.html">영화예매</a>
-                <a href="#">리뷰</a>
-                <a href="팀8_송이피디아_mypage.html">마이페이지</a>
-            </nav>
-            <!-- 검색창 -->
-            <div class="search-box" role="search"><label class="visually-hidden" for="site-search">작품명 검색</label><span class="search-icon"></span><input id="site-search"
-                    placeholder="작품명, 배우, 감독을 검색해 보세요" type="search" /></div>
-            <div class="account-links"><a href="#">로그인</a><a class="button signup" href="#">회원가입</a></div>
-        </div>
-    </header>
-    <main class="container section" id="main">
-        <div class="page-heading">
-            <h1>영화 예매</h1>
-        </div>
-        <!-- 예매 화면 -->
-        <div class="booking-layout">
-            <div class="booking-main">
-                <fieldset class="movie-picker">
-                    <legend>영화 선택</legend>
-                    <!-- 영화별 링크 대상 -->
-                    <span id="chiikawa" class="movie-target"></span>
-                    <span id="odyssey" class="movie-target"></span>
-                    <span id="assassins" class="movie-target"></span>
-
-                    <!-- 영화 선택 -->
-                    <div class="movie-tabs">
-                        <a href="#chiikawa">극장판 치이카와-인어 섬의 비밀</a>
-                        <a href="#odyssey">오디세이</a>
-                        <a href="#assassins">암살자(들)</a>
-                    </div>
-                    <div>
-                        <!-- 치이카와 예매 -->
-                        <section class="movie-panel chiikawa-panel">
-                            <div class="theme-head chiikawa-theme">
-                                <div>
-                                    <h2>극장판 치이카와-인어 섬의 비밀</h2>
-
-                                </div><span>THEMED SEATS</span>
-                            </div>
-                            <!-- 영화 정보 -->
-                            <div class="movie-info-card">
-                                <a class="movie-info-poster" href="팀8_송이피디아_ratingchiikawa.html"><img src="images/팀8_chiikawa_poster.png" alt="치이카와 포스터" /></a>
-                                <div class="movie-info-body">
-                                    <div class="movie-info-topline"><span class="info-kicker">NOW SHOWING</span><span
-                                            class="score-pill"><span>★</span> 4.3 <small>/
-                                                5.0</small></span></div>
-                                    <p class="info-meta">애니메이션 <span>·</span> 99분 <span
-                                            class="review-count">428명 평가</span></p>
-                                    <dl class="credit-list">
-                                        <div>
-                                            <dt>감독</dt>
-                                            <dd>오이카와 케이</dd>
-                                        </div>
-                                        <div>
-                                            <dt>출연</dt>
-                                            <dd>이주은, 손정민, 권다예</dd>
-                                        </div>
-                                    </dl>
-                                    <div class="mini-review">
-                                        <div class="review-title"><strong>관객 한줄평</strong><span>울랄라세션 · 메인 인기 리뷰</span>
-                                        </div>
-                                        <p>“아주 재밌었다. 또 보고 싶다. 너무 감동적이었다.”</p>
-                                    </div>
-                                    <a class="rating-link" href="팀8_송이피디아_ratingchiikawa.html">영화 평점·리뷰 더 보기 <span>→</span></a>
-                                </div>
-                            </div>
-                            <div class="option-grid">
-                                <!-- 영화관 지점 선택 -->
-                                <fieldset class="option-group">
-                                    <legend>영화관 지점 선택</legend>
-                                    <div class="chips"><input checked="" class="visually-hidden chip-input"
-                                            id="chiikawa-theater-0" name="chiikawa-theater" type="radio" /><label
-                                            for="chiikawa-theater-0">CGV 용산아이파크몰</label><input
-                                            class="visually-hidden chip-input" id="chiikawa-theater-1"
-                                            name="chiikawa-theater" type="radio" /><label for="chiikawa-theater-1">CGV
-                                            왕십리</label><input class="visually-hidden chip-input" id="chiikawa-theater-2"
-                                            name="chiikawa-theater" type="radio" /><label for="chiikawa-theater-2">CGV
-                                            영등포타임스퀘어</label><input class="visually-hidden chip-input"
-                                            id="chiikawa-theater-3" name="chiikawa-theater" type="radio" /><label
-                                            for="chiikawa-theater-3">CGV 강변</label><input
-                                            class="visually-hidden chip-input" id="chiikawa-theater-4"
-                                            name="chiikawa-theater" type="radio" /><label for="chiikawa-theater-4">CGV
-                                            여의도</label><input class="visually-hidden chip-input" id="chiikawa-theater-5"
-                                            name="chiikawa-theater" type="radio" /><label for="chiikawa-theater-5">CGV
-                                            압구정</label><input class="visually-hidden chip-input" id="chiikawa-theater-6"
-                                            name="chiikawa-theater" type="radio" /><label for="chiikawa-theater-6">CGV
-                                            홍대</label><input class="visually-hidden chip-input" id="chiikawa-theater-7"
-                                            name="chiikawa-theater" type="radio" /><label for="chiikawa-theater-7">CGV
-                                            천호</label><input class="visually-hidden chip-input" id="chiikawa-theater-8"
-                                            name="chiikawa-theater" type="radio" /><label for="chiikawa-theater-8">CGV
-                                            중계</label></div>
-                                </fieldset>
-                                <!-- 상영관 종류 선택 -->
-                                <fieldset class="option-group">
-                                    <legend>상영관 종류 선택</legend>
-                                    <div class="chips"><input checked="" class="visually-hidden chip-input"
-                                            id="chiikawa-format-standard" name="chiikawa-format" type="radio" /><label
-                                            for="chiikawa-format-standard">일반 2D</label><span
-                                            class="format-extra"><input class="visually-hidden chip-input"
-                                                id="chiikawa-format-imax" name="chiikawa-format" type="radio" /><label
-                                                for="chiikawa-format-imax">IMAX</label><input
-                                                class="visually-hidden chip-input" id="chiikawa-format-4dx"
-                                                name="chiikawa-format" type="radio" /><label
-                                                for="chiikawa-format-4dx">4DX</label><input
-                                                class="visually-hidden chip-input" id="chiikawa-format-screenx"
-                                                name="chiikawa-format" type="radio" /><label
-                                                for="chiikawa-format-screenx">SCREENX</label></span></div>
-                                </fieldset>
-                                <!-- 상영시간 선택 -->
-                                <fieldset class="option-group">
-                                    <legend>상영시간 선택</legend>
-                                    <div class="chips"><input class="visually-hidden chip-input" id="chiikawa-time-0"
-                                            name="chiikawa-time" type="radio" /><label
-                                            for="chiikawa-time-0">10:20</label><input checked=""
-                                            class="visually-hidden chip-input" id="chiikawa-time-1" name="chiikawa-time"
-                                            type="radio" /><label for="chiikawa-time-1">13:20</label><input
-                                            class="visually-hidden chip-input" id="chiikawa-time-2" name="chiikawa-time"
-                                            type="radio" /><label for="chiikawa-time-2">16:30</label></div>
-                                </fieldset>
-                            </div>
-                            <!-- 좌석 선택 -->
-                            <fieldset class="seats-field">
-                                <legend>좌석 선택</legend>
-                                <div class="screen">SCREEN</div>
-                                <div class="seat-map" role="group">
-                                    <div class="seat-row"><span class="row-label">A</span><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-a1"
-                                            name="chiikawa-seats" type="checkbox" value="A1" /><label class="seat" for="chiikawa-seat-a1" title="A1"><span>A1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-a2"
-                                            name="chiikawa-seats" type="checkbox" value="A2" /><label class="seat" for="chiikawa-seat-a2" title="A2"><span>A2</span></label><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="chiikawa-seat-a3"
-                                            name="chiikawa-seats" type="checkbox" value="A3" /><label
-                                            class="seat seat-taken" for="chiikawa-seat-a3"
-                                            title="A3 예매 완료"><span>A3</span></label><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="chiikawa-seat-a4"
-                                            name="chiikawa-seats" type="checkbox" value="A4" /><label
-                                            class="seat seat-taken" for="chiikawa-seat-a4"
-                                            title="A4 예매 완료"><span>A4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-a5"
-                                            name="chiikawa-seats" type="checkbox" value="A5" /><label class="seat" for="chiikawa-seat-a5" title="A5"><span>A5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-a6"
-                                            name="chiikawa-seats" type="checkbox" value="A6" /><label class="seat" for="chiikawa-seat-a6" title="A6"><span>A6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-a7"
-                                            name="chiikawa-seats" type="checkbox" value="A7" /><label class="seat" for="chiikawa-seat-a7" title="A7"><span>A7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-a8"
-                                            name="chiikawa-seats" type="checkbox" value="A8" /><label class="seat" for="chiikawa-seat-a8" title="A8"><span>A8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">B</span><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-b1"
-                                            name="chiikawa-seats" type="checkbox" value="B1" /><label class="seat" for="chiikawa-seat-b1" title="B1"><span>B1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-b2"
-                                            name="chiikawa-seats" type="checkbox" value="B2" /><label class="seat" for="chiikawa-seat-b2" title="B2"><span>B2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-b3"
-                                            name="chiikawa-seats" type="checkbox" value="B3" /><label class="seat" for="chiikawa-seat-b3" title="B3"><span>B3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-b4"
-                                            name="chiikawa-seats" type="checkbox" value="B4" /><label class="seat" for="chiikawa-seat-b4" title="B4"><span>B4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-b5"
-                                            name="chiikawa-seats" type="checkbox" value="B5" /><label class="seat" for="chiikawa-seat-b5" title="B5"><span>B5</span></label><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="chiikawa-seat-b6"
-                                            name="chiikawa-seats" type="checkbox" value="B6" /><label
-                                            class="seat seat-taken" for="chiikawa-seat-b6"
-                                            title="B6 예매 완료"><span>B6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-b7"
-                                            name="chiikawa-seats" type="checkbox" value="B7" /><label class="seat" for="chiikawa-seat-b7" title="B7"><span>B7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-b8"
-                                            name="chiikawa-seats" type="checkbox" value="B8" /><label class="seat" for="chiikawa-seat-b8" title="B8"><span>B8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">C</span><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-c1"
-                                            name="chiikawa-seats" type="checkbox" value="C1" /><label class="seat" for="chiikawa-seat-c1" title="C1"><span>C1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-c2"
-                                            name="chiikawa-seats" type="checkbox" value="C2" /><label class="seat" for="chiikawa-seat-c2" title="C2"><span>C2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-c3"
-                                            name="chiikawa-seats" type="checkbox" value="C3" /><label class="seat" for="chiikawa-seat-c3" title="C3"><span>C3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-c4"
-                                            name="chiikawa-seats" type="checkbox" value="C4" /><label class="seat" for="chiikawa-seat-c4" title="C4"><span>C4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-c5"
-                                            name="chiikawa-seats" type="checkbox" value="C5" /><label class="seat" for="chiikawa-seat-c5" title="C5"><span>C5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-c6"
-                                            name="chiikawa-seats" type="checkbox" value="C6" /><label class="seat" for="chiikawa-seat-c6" title="C6"><span>C6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-c7"
-                                            name="chiikawa-seats" type="checkbox" value="C7" /><label class="seat" for="chiikawa-seat-c7" title="C7"><span>C7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-c8"
-                                            name="chiikawa-seats" type="checkbox" value="C8" /><label class="seat" for="chiikawa-seat-c8" title="C8"><span>C8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">D</span><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="chiikawa-seat-d1"
-                                            name="chiikawa-seats" type="checkbox" value="D1" /><label
-                                            class="seat seat-taken" for="chiikawa-seat-d1"
-                                            title="D1 예매 완료"><span>D1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-d2"
-                                            name="chiikawa-seats" type="checkbox" value="D2" /><label class="seat" for="chiikawa-seat-d2" title="D2"><span>D2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-d3"
-                                            name="chiikawa-seats" type="checkbox" value="D3" /><label class="seat" for="chiikawa-seat-d3" title="D3"><span>D3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-d4"
-                                            name="chiikawa-seats" type="checkbox" value="D4" /><label class="seat" for="chiikawa-seat-d4" title="D4"><span>D4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-d5"
-                                            name="chiikawa-seats" type="checkbox" value="D5" /><label class="seat" for="chiikawa-seat-d5" title="D5"><span>D5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-d6"
-                                            name="chiikawa-seats" type="checkbox" value="D6" /><label class="seat" for="chiikawa-seat-d6" title="D6"><span>D6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-d7"
-                                            name="chiikawa-seats" type="checkbox" value="D7" /><label class="seat" for="chiikawa-seat-d7" title="D7"><span>D7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-d8"
-                                            name="chiikawa-seats" type="checkbox" value="D8" /><label class="seat" for="chiikawa-seat-d8" title="D8"><span>D8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">E</span><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-e1"
-                                            name="chiikawa-seats" type="checkbox" value="E1" /><label class="seat" for="chiikawa-seat-e1" title="E1"><span>E1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-e2"
-                                            name="chiikawa-seats" type="checkbox" value="E2" /><label class="seat" for="chiikawa-seat-e2" title="E2"><span>E2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-e3"
-                                            name="chiikawa-seats" type="checkbox" value="E3" /><label class="seat" for="chiikawa-seat-e3" title="E3"><span>E3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-e4"
-                                            name="chiikawa-seats" type="checkbox" value="E4" /><label class="seat" for="chiikawa-seat-e4" title="E4"><span>E4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-e5"
-                                            name="chiikawa-seats" type="checkbox" value="E5" /><label class="seat" for="chiikawa-seat-e5" title="E5"><span>E5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-e6"
-                                            name="chiikawa-seats" type="checkbox" value="E6" /><label class="seat" for="chiikawa-seat-e6" title="E6"><span>E6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-e7"
-                                            name="chiikawa-seats" type="checkbox" value="E7" /><label class="seat" for="chiikawa-seat-e7" title="E7"><span>E7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="chiikawa-seat-e8"
-                                            name="chiikawa-seats" type="checkbox" value="E8" /><label class="seat" for="chiikawa-seat-e8" title="E8"><span>E8</span></label></div>
-                                </div>
-                                <!-- 좌석 상태 안내 -->
-                                <div class="seat-legend"><span><i></i>선택 가능</span><span><i
-                                            class="picked"></i>선택 좌석</span><span><i class="unavailable"></i>예매 완료</span>
-                                </div>
-                            </fieldset>
-                        </section>
-                        <!-- 오디세이 예매 -->
-                        <section class="movie-panel odyssey-panel">
-                            <div class="theme-head odyssey-theme">
-                                <div>
-                                    <h2>오디세이</h2>
-                                </div><span>THEMED SEATS</span>
-                            </div>
-                            <!-- 영화 정보 -->
-                            <div class="movie-info-card">
-                                <a class="movie-info-poster" href="팀8_송이피디아_ratingodyssey.html"><img src="images/팀8_odyssey_poster.png" alt="오디세이 포스터" /></a>
-                                <div class="movie-info-body">
-                                    <div class="movie-info-topline"><span class="info-kicker">NOW SHOWING</span><span
-                                            class="score-pill"><span>★</span> 4.1 <small>/
-                                                5.0</small></span></div>
-                                    <p class="info-meta">액션 · 드라마 · 어드벤처 <span>·</span> 172분 <span
-                                            class="review-count">316명 평가</span></p>
-                                    <dl class="credit-list">
-                                        <div>
-                                            <dt>감독</dt>
-                                            <dd>크리스토퍼 놀란</dd>
-                                        </div>
-                                        <div>
-                                            <dt>출연</dt>
-                                            <dd>맷 데이먼 · 톰 홀랜드 · 앤 해서웨이</dd>
-                                        </div>
-                                    </dl>
-                                    <div class="mini-review">
-                                        <div class="review-title"><strong>관객 한줄평</strong><span>눈꽃산책 · 메인 인기 리뷰</span>
-                                        </div>
-                                        <p>“많은 장면들이 오래 기억 남는 영화.”</p>
-                                    </div>
-                                    <a class="rating-link" href="팀8_송이피디아_ratingodyssey.html">영화 평점·리뷰 더 보기 <span>→</span></a>
-                                </div>
-                            </div>
-                            <div class="option-grid">
-                                <!-- 영화관 지점 선택 -->
-                                <fieldset class="option-group">
-                                    <legend>영화관 지점 선택</legend>
-                                    <div class="chips"><input checked="" class="visually-hidden chip-input"
-                                            id="odyssey-theater-0" name="odyssey-theater" type="radio" /><label
-                                            for="odyssey-theater-0">CGV 용산아이파크몰</label><input
-                                            class="visually-hidden chip-input" id="odyssey-theater-1"
-                                            name="odyssey-theater" type="radio" /><label for="odyssey-theater-1">CGV
-                                            왕십리</label><input class="visually-hidden chip-input" id="odyssey-theater-2"
-                                            name="odyssey-theater" type="radio" /><label for="odyssey-theater-2">CGV
-                                            영등포타임스퀘어</label><input class="visually-hidden chip-input"
-                                            id="odyssey-theater-3" name="odyssey-theater" type="radio" /><label
-                                            for="odyssey-theater-3">CGV 강변</label><input
-                                            class="visually-hidden chip-input" id="odyssey-theater-4"
-                                            name="odyssey-theater" type="radio" /><label for="odyssey-theater-4">CGV
-                                            여의도</label><input class="visually-hidden chip-input" id="odyssey-theater-5"
-                                            name="odyssey-theater" type="radio" /><label for="odyssey-theater-5">CGV
-                                            압구정</label><input class="visually-hidden chip-input" id="odyssey-theater-6"
-                                            name="odyssey-theater" type="radio" /><label for="odyssey-theater-6">CGV
-                                            홍대</label><input class="visually-hidden chip-input" id="odyssey-theater-7"
-                                            name="odyssey-theater" type="radio" /><label for="odyssey-theater-7">CGV
-                                            천호</label><input class="visually-hidden chip-input" id="odyssey-theater-8"
-                                            name="odyssey-theater" type="radio" /><label for="odyssey-theater-8">CGV
-                                            중계</label></div>
-
-                                </fieldset>
-                                <!-- 상영관 종류 선택 -->
-                                <fieldset class="option-group">
-                                    <legend>상영관 종류 선택</legend>
-                                    <div class="chips"><input checked="" class="visually-hidden chip-input"
-                                            id="odyssey-format-standard" name="odyssey-format" type="radio" /><label
-                                            for="odyssey-format-standard">일반 2D</label><span class="format-extra"><input
-                                                class="visually-hidden chip-input" id="odyssey-format-imax"
-                                                name="odyssey-format" type="radio" /><label
-                                                for="odyssey-format-imax">IMAX</label><input
-                                                class="visually-hidden chip-input" id="odyssey-format-4dx"
-                                                name="odyssey-format" type="radio" /><label
-                                                for="odyssey-format-4dx">4DX</label><input
-                                                class="visually-hidden chip-input" id="odyssey-format-screenx"
-                                                name="odyssey-format" type="radio" /><label
-                                                for="odyssey-format-screenx">SCREENX</label></span></div>
-
-                                </fieldset>
-                                <!-- 상영시간 선택 -->
-                                <fieldset class="option-group">
-                                    <legend>상영시간 선택</legend>
-                                    <div class="chips"><input class="visually-hidden chip-input" id="odyssey-time-0"
-                                            name="odyssey-time" type="radio" /><label
-                                            for="odyssey-time-0">11:00</label><input checked=""
-                                            class="visually-hidden chip-input" id="odyssey-time-1" name="odyssey-time"
-                                            type="radio" /><label for="odyssey-time-1">14:10</label><input
-                                            class="visually-hidden chip-input" id="odyssey-time-2" name="odyssey-time"
-                                            type="radio" /><label for="odyssey-time-2">18:20</label></div>
-                                </fieldset>
-                            </div>
-                            <!-- 좌석 선택 -->
-                            <fieldset class="seats-field">
-                                <legend>좌석 선택</legend>
-                                <div class="screen">SCREEN</div>
-                                <div class="seat-map" role="group">
-                                    <div class="seat-row"><span class="row-label">A</span><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-a1"
-                                            name="odyssey-seats" type="checkbox" value="A1" /><label class="seat" for="odyssey-seat-a1" title="A1"><span>A1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-a2"
-                                            name="odyssey-seats" type="checkbox" value="A2" /><label class="seat" for="odyssey-seat-a2" title="A2"><span>A2</span></label><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="odyssey-seat-a3"
-                                            name="odyssey-seats" type="checkbox" value="A3" /><label
-                                            class="seat seat-taken" for="odyssey-seat-a3"
-                                            title="A3 예매 완료"><span>A3</span></label><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="odyssey-seat-a4"
-                                            name="odyssey-seats" type="checkbox" value="A4" /><label
-                                            class="seat seat-taken" for="odyssey-seat-a4"
-                                            title="A4 예매 완료"><span>A4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-a5"
-                                            name="odyssey-seats" type="checkbox" value="A5" /><label class="seat" for="odyssey-seat-a5" title="A5"><span>A5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-a6"
-                                            name="odyssey-seats" type="checkbox" value="A6" /><label class="seat" for="odyssey-seat-a6" title="A6"><span>A6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-a7"
-                                            name="odyssey-seats" type="checkbox" value="A7" /><label class="seat" for="odyssey-seat-a7" title="A7"><span>A7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-a8"
-                                            name="odyssey-seats" type="checkbox" value="A8" /><label class="seat" for="odyssey-seat-a8" title="A8"><span>A8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">B</span><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-b1"
-                                            name="odyssey-seats" type="checkbox" value="B1" /><label class="seat" for="odyssey-seat-b1" title="B1"><span>B1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-b2"
-                                            name="odyssey-seats" type="checkbox" value="B2" /><label class="seat" for="odyssey-seat-b2" title="B2"><span>B2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-b3"
-                                            name="odyssey-seats" type="checkbox" value="B3" /><label class="seat" for="odyssey-seat-b3" title="B3"><span>B3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-b4"
-                                            name="odyssey-seats" type="checkbox" value="B4" /><label class="seat" for="odyssey-seat-b4" title="B4"><span>B4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-b5"
-                                            name="odyssey-seats" type="checkbox" value="B5" /><label class="seat" for="odyssey-seat-b5" title="B5"><span>B5</span></label><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="odyssey-seat-b6"
-                                            name="odyssey-seats" type="checkbox" value="B6" /><label
-                                            class="seat seat-taken" for="odyssey-seat-b6"
-                                            title="B6 예매 완료"><span>B6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-b7"
-                                            name="odyssey-seats" type="checkbox" value="B7" /><label class="seat" for="odyssey-seat-b7" title="B7"><span>B7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-b8"
-                                            name="odyssey-seats" type="checkbox" value="B8" /><label class="seat" for="odyssey-seat-b8" title="B8"><span>B8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">C</span><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-c1"
-                                            name="odyssey-seats" type="checkbox" value="C1" /><label class="seat" for="odyssey-seat-c1" title="C1"><span>C1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-c2"
-                                            name="odyssey-seats" type="checkbox" value="C2" /><label class="seat" for="odyssey-seat-c2" title="C2"><span>C2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-c3"
-                                            name="odyssey-seats" type="checkbox" value="C3" /><label class="seat" for="odyssey-seat-c3" title="C3"><span>C3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-c4"
-                                            name="odyssey-seats" type="checkbox" value="C4" /><label class="seat" for="odyssey-seat-c4" title="C4"><span>C4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-c5"
-                                            name="odyssey-seats" type="checkbox" value="C5" /><label class="seat" for="odyssey-seat-c5" title="C5"><span>C5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-c6"
-                                            name="odyssey-seats" type="checkbox" value="C6" /><label class="seat" for="odyssey-seat-c6" title="C6"><span>C6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-c7"
-                                            name="odyssey-seats" type="checkbox" value="C7" /><label class="seat" for="odyssey-seat-c7" title="C7"><span>C7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-c8"
-                                            name="odyssey-seats" type="checkbox" value="C8" /><label class="seat" for="odyssey-seat-c8" title="C8"><span>C8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">D</span><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="odyssey-seat-d1"
-                                            name="odyssey-seats" type="checkbox" value="D1" /><label
-                                            class="seat seat-taken" for="odyssey-seat-d1"
-                                            title="D1 예매 완료"><span>D1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-d2"
-                                            name="odyssey-seats" type="checkbox" value="D2" /><label class="seat" for="odyssey-seat-d2" title="D2"><span>D2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-d3"
-                                            name="odyssey-seats" type="checkbox" value="D3" /><label class="seat" for="odyssey-seat-d3" title="D3"><span>D3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-d4"
-                                            name="odyssey-seats" type="checkbox" value="D4" /><label class="seat" for="odyssey-seat-d4" title="D4"><span>D4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-d5"
-                                            name="odyssey-seats" type="checkbox" value="D5" /><label class="seat" for="odyssey-seat-d5" title="D5"><span>D5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-d6"
-                                            name="odyssey-seats" type="checkbox" value="D6" /><label class="seat" for="odyssey-seat-d6" title="D6"><span>D6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-d7"
-                                            name="odyssey-seats" type="checkbox" value="D7" /><label class="seat" for="odyssey-seat-d7" title="D7"><span>D7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-d8"
-                                            name="odyssey-seats" type="checkbox" value="D8" /><label class="seat" for="odyssey-seat-d8" title="D8"><span>D8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">E</span><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-e1"
-                                            name="odyssey-seats" type="checkbox" value="E1" /><label class="seat" for="odyssey-seat-e1" title="E1"><span>E1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-e2"
-                                            name="odyssey-seats" type="checkbox" value="E2" /><label class="seat" for="odyssey-seat-e2" title="E2"><span>E2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-e3"
-                                            name="odyssey-seats" type="checkbox" value="E3" /><label class="seat" for="odyssey-seat-e3" title="E3"><span>E3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-e4"
-                                            name="odyssey-seats" type="checkbox" value="E4" /><label class="seat" for="odyssey-seat-e4" title="E4"><span>E4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-e5"
-                                            name="odyssey-seats" type="checkbox" value="E5" /><label class="seat" for="odyssey-seat-e5" title="E5"><span>E5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-e6"
-                                            name="odyssey-seats" type="checkbox" value="E6" /><label class="seat" for="odyssey-seat-e6" title="E6"><span>E6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-e7"
-                                            name="odyssey-seats" type="checkbox" value="E7" /><label class="seat" for="odyssey-seat-e7" title="E7"><span>E7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="odyssey-seat-e8"
-                                            name="odyssey-seats" type="checkbox" value="E8" /><label class="seat" for="odyssey-seat-e8" title="E8"><span>E8</span></label></div>
-                                </div>
-                                <!-- 좌석 상태 안내 -->
-                                <div class="seat-legend"><span><i></i>선택 가능</span><span><i
-                                            class="picked"></i>선택 좌석</span><span><i class="unavailable"></i>예매 완료</span>
-                                </div>
-                            </fieldset>
-                        </section>
-                        <!-- 암살자(들) 예매 -->
-                        <section class="movie-panel assassins-panel">
-                            <div class="theme-head assassins-theme">
-                                <div>
-                                    <h2>암살자(들)</h2>
-
-                                </div><span>THEMED SEATS</span>
-                            </div>
-                            <!-- 영화 정보 -->
-                            <div class="movie-info-card">
-                                <a class="movie-info-poster" href="팀8_송이피디아_ratingassassins.html"><img src="images/팀8_assassins_poster.png" alt="암살자(들) 포스터" /></a>
-                                <div class="movie-info-body">
-                                    <div class="movie-info-topline"><span class="info-kicker">NOW SHOWING</span><span
-                                            class="score-pill"><span>★</span> 4.4 <small>/
-                                                5.0</small></span></div>
-                                    <p class="info-meta">범죄 · 드라마 <span>·</span> 131분 <span
-                                            class="review-count">582명 평가</span></p>
-                                    <dl class="credit-list">
-                                        <div>
-                                            <dt>감독</dt>
-                                            <dd>허진호</dd>
-                                        </div>
-                                        <div>
-                                            <dt>출연</dt>
-                                            <dd>유해진, 박해일, 이민호</dd>
-                                        </div>
-                                    </dl>
-                                    <div class="mini-review">
-                                        <div class="review-title"><strong>관객 한줄평</strong><span>버섯모둠 · 메인 인기 리뷰</span></div>
-                                        <p>"지나가는 장면들 사이로 시대를 엿보다"</p>
-                                    </div>
-                                    <a class="rating-link" href="팀8_송이피디아_ratingassassins.html">영화 평점·리뷰 더 보기 <span>→</span></a>
-                                </div>
-                            </div>
-                            <div class="option-grid">
-                                <!-- 영화관 지점 선택 -->
-                                <fieldset class="option-group">
-                                    <legend>영화관 지점 선택</legend>
-                                    <div class="chips"><input checked="" class="visually-hidden chip-input"
-                                            id="assassins-theater-0" name="assassins-theater" type="radio" /><label
-                                            for="assassins-theater-0">CGV 용산아이파크몰</label><input
-                                            class="visually-hidden chip-input" id="assassins-theater-1"
-                                            name="assassins-theater" type="radio" /><label for="assassins-theater-1">CGV
-                                            왕십리</label><input class="visually-hidden chip-input"
-                                            id="assassins-theater-2" name="assassins-theater" type="radio" /><label
-                                            for="assassins-theater-2">CGV 영등포타임스퀘어</label><input
-                                            class="visually-hidden chip-input" id="assassins-theater-3"
-                                            name="assassins-theater" type="radio" /><label for="assassins-theater-3">CGV
-                                            강변</label><input class="visually-hidden chip-input" id="assassins-theater-4"
-                                            name="assassins-theater" type="radio" /><label for="assassins-theater-4">CGV
-                                            여의도</label><input class="visually-hidden chip-input"
-                                            id="assassins-theater-5" name="assassins-theater" type="radio" /><label
-                                            for="assassins-theater-5">CGV 압구정</label><input
-                                            class="visually-hidden chip-input" id="assassins-theater-6"
-                                            name="assassins-theater" type="radio" /><label for="assassins-theater-6">CGV
-                                            홍대</label><input class="visually-hidden chip-input" id="assassins-theater-7"
-                                            name="assassins-theater" type="radio" /><label for="assassins-theater-7">CGV
-                                            천호</label><input class="visually-hidden chip-input" id="assassins-theater-8"
-                                            name="assassins-theater" type="radio" /><label for="assassins-theater-8">CGV
-                                            중계</label></div>
-
-                                </fieldset>
-                                <!-- 상영관 종류 선택 -->
-                                <fieldset class="option-group">
-                                    <legend>상영관 종류 선택</legend>
-                                    <div class="chips"><input checked="" class="visually-hidden chip-input"
-                                            id="assassins-format-standard" name="assassins-format" type="radio" /><label
-                                            for="assassins-format-standard">일반 2D</label><span
-                                            class="format-extra"><input class="visually-hidden chip-input"
-                                                id="assassins-format-imax" name="assassins-format" type="radio" /><label
-                                                for="assassins-format-imax">IMAX</label><input
-                                                class="visually-hidden chip-input" id="assassins-format-4dx"
-                                                name="assassins-format" type="radio" /><label
-                                                for="assassins-format-4dx">4DX</label><input
-                                                class="visually-hidden chip-input" id="assassins-format-screenx"
-                                                name="assassins-format" type="radio" /><label
-                                                for="assassins-format-screenx">SCREENX</label></span></div>
-
-                                </fieldset>
-                                <!-- 상영시간 선택 -->
-                                <fieldset class="option-group">
-                                    <legend>상영시간 선택</legend>
-                                    <div class="chips"><input class="visually-hidden chip-input" id="assassins-time-0"
-                                            name="assassins-time" type="radio" /><label
-                                            for="assassins-time-0">09:40</label><input checked=""
-                                            class="visually-hidden chip-input" id="assassins-time-1"
-                                            name="assassins-time" type="radio" /><label
-                                            for="assassins-time-1">12:50</label><input
-                                            class="visually-hidden chip-input" id="assassins-time-2"
-                                            name="assassins-time" type="radio" /><label
-                                            for="assassins-time-2">17:00</label></div>
-                                </fieldset>
-                            </div>
-                            <!-- 좌석 선택 -->
-                            <fieldset class="seats-field">
-                                <legend>좌석 선택</legend>
-                                <div class="screen">SCREEN</div>
-                                <div class="seat-map" role="group">
-                                    <div class="seat-row"><span class="row-label">A</span><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-a1"
-                                            name="assassins-seats" type="checkbox" value="A1" /><label class="seat" for="assassins-seat-a1" title="A1"><span>A1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-a2"
-                                            name="assassins-seats" type="checkbox" value="A2" /><label class="seat" for="assassins-seat-a2" title="A2"><span>A2</span></label><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="assassins-seat-a3"
-                                            name="assassins-seats" type="checkbox" value="A3" /><label
-                                            class="seat seat-taken" for="assassins-seat-a3"
-                                            title="A3 예매 완료"><span>A3</span></label><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="assassins-seat-a4"
-                                            name="assassins-seats" type="checkbox" value="A4" /><label
-                                            class="seat seat-taken" for="assassins-seat-a4"
-                                            title="A4 예매 완료"><span>A4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-a5"
-                                            name="assassins-seats" type="checkbox" value="A5" /><label class="seat" for="assassins-seat-a5" title="A5"><span>A5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-a6"
-                                            name="assassins-seats" type="checkbox" value="A6" /><label class="seat" for="assassins-seat-a6" title="A6"><span>A6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-a7"
-                                            name="assassins-seats" type="checkbox" value="A7" /><label class="seat" for="assassins-seat-a7" title="A7"><span>A7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-a8"
-                                            name="assassins-seats" type="checkbox" value="A8" /><label class="seat" for="assassins-seat-a8" title="A8"><span>A8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">B</span><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-b1"
-                                            name="assassins-seats" type="checkbox" value="B1" /><label class="seat" for="assassins-seat-b1" title="B1"><span>B1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-b2"
-                                            name="assassins-seats" type="checkbox" value="B2" /><label class="seat" for="assassins-seat-b2" title="B2"><span>B2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-b3"
-                                            name="assassins-seats" type="checkbox" value="B3" /><label class="seat" for="assassins-seat-b3" title="B3"><span>B3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-b4"
-                                            name="assassins-seats" type="checkbox" value="B4" /><label class="seat" for="assassins-seat-b4" title="B4"><span>B4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-b5"
-                                            name="assassins-seats" type="checkbox" value="B5" /><label class="seat" for="assassins-seat-b5" title="B5"><span>B5</span></label><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="assassins-seat-b6"
-                                            name="assassins-seats" type="checkbox" value="B6" /><label
-                                            class="seat seat-taken" for="assassins-seat-b6"
-                                            title="B6 예매 완료"><span>B6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-b7"
-                                            name="assassins-seats" type="checkbox" value="B7" /><label class="seat" for="assassins-seat-b7" title="B7"><span>B7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-b8"
-                                            name="assassins-seats" type="checkbox" value="B8" /><label class="seat" for="assassins-seat-b8" title="B8"><span>B8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">C</span><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-c1"
-                                            name="assassins-seats" type="checkbox" value="C1" /><label class="seat" for="assassins-seat-c1" title="C1"><span>C1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-c2"
-                                            name="assassins-seats" type="checkbox" value="C2" /><label class="seat" for="assassins-seat-c2" title="C2"><span>C2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-c3"
-                                            name="assassins-seats" type="checkbox" value="C3" /><label class="seat" for="assassins-seat-c3" title="C3"><span>C3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-c4"
-                                            name="assassins-seats" type="checkbox" value="C4" /><label class="seat" for="assassins-seat-c4" title="C4"><span>C4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-c5"
-                                            name="assassins-seats" type="checkbox" value="C5" /><label class="seat" for="assassins-seat-c5" title="C5"><span>C5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-c6"
-                                            name="assassins-seats" type="checkbox" value="C6" /><label class="seat" for="assassins-seat-c6" title="C6"><span>C6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-c7"
-                                            name="assassins-seats" type="checkbox" value="C7" /><label class="seat" for="assassins-seat-c7" title="C7"><span>C7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-c8"
-                                            name="assassins-seats" type="checkbox" value="C8" /><label class="seat" for="assassins-seat-c8" title="C8"><span>C8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">D</span><input
-                                            class="seat-checkbox visually-hidden" disabled="" id="assassins-seat-d1"
-                                            name="assassins-seats" type="checkbox" value="D1" /><label
-                                            class="seat seat-taken" for="assassins-seat-d1"
-                                            title="D1 예매 완료"><span>D1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-d2"
-                                            name="assassins-seats" type="checkbox" value="D2" /><label class="seat" for="assassins-seat-d2" title="D2"><span>D2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-d3"
-                                            name="assassins-seats" type="checkbox" value="D3" /><label class="seat" for="assassins-seat-d3" title="D3"><span>D3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-d4"
-                                            name="assassins-seats" type="checkbox" value="D4" /><label class="seat" for="assassins-seat-d4" title="D4"><span>D4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-d5"
-                                            name="assassins-seats" type="checkbox" value="D5" /><label class="seat" for="assassins-seat-d5" title="D5"><span>D5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-d6"
-                                            name="assassins-seats" type="checkbox" value="D6" /><label class="seat" for="assassins-seat-d6" title="D6"><span>D6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-d7"
-                                            name="assassins-seats" type="checkbox" value="D7" /><label class="seat" for="assassins-seat-d7" title="D7"><span>D7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-d8"
-                                            name="assassins-seats" type="checkbox" value="D8" /><label class="seat" for="assassins-seat-d8" title="D8"><span>D8</span></label></div>
-                                    <div class="seat-row"><span class="row-label">E</span><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-e1"
-                                            name="assassins-seats" type="checkbox" value="E1" /><label class="seat" for="assassins-seat-e1" title="E1"><span>E1</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-e2"
-                                            name="assassins-seats" type="checkbox" value="E2" /><label class="seat" for="assassins-seat-e2" title="E2"><span>E2</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-e3"
-                                            name="assassins-seats" type="checkbox" value="E3" /><label class="seat" for="assassins-seat-e3" title="E3"><span>E3</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-e4"
-                                            name="assassins-seats" type="checkbox" value="E4" /><label class="seat" for="assassins-seat-e4" title="E4"><span>E4</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-e5"
-                                            name="assassins-seats" type="checkbox" value="E5" /><label class="seat" for="assassins-seat-e5" title="E5"><span>E5</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-e6"
-                                            name="assassins-seats" type="checkbox" value="E6" /><label class="seat" for="assassins-seat-e6" title="E6"><span>E6</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-e7"
-                                            name="assassins-seats" type="checkbox" value="E7" /><label class="seat" for="assassins-seat-e7" title="E7"><span>E7</span></label><input
-                                            class="seat-checkbox visually-hidden" id="assassins-seat-e8"
-                                            name="assassins-seats" type="checkbox" value="E8" /><label class="seat" for="assassins-seat-e8" title="E8"><span>E8</span></label></div>
-                                </div>
-                                <!-- 좌석 상태 안내 -->
-                                <div class="seat-legend"><span><i></i>선택 가능</span><span><i
-                                            class="picked"></i>선택 좌석</span><span><i class="unavailable"></i>예매 완료</span>
-                                </div>
-                            </fieldset>
-                        </section>
-                    </div>
-                </fieldset>
-
-            </div>
-            <!-- 예매 안내 -->
-            <aside class="booking-summary">
-                <h2>예매 안내</h2>
-                <div class="summary-card">
-                    <p>영화 제목과 영화관 지점, 상영관 종류, 상영시간, 좌석을 선택하여 예매하실 수 있습니다.</p>
-                    <p class="help">영화관 사정에 의하여 상영 시간이 변경될 수 있습니다.<br>쿠폰 및 기프티콘, 상품권은 사용이 불가능합니다. CGV 홈페이지에서 사용하실 수 있습니다.<br>영화 상영과 예매에 관한 문의는 CGV 고객센터를 이용하시기 바랍니다.</p>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1" name="viewport" />
+        <meta content="민예원, 심서연, 정아윤, 김영서" name="author" />
+        <meta name="team" content="8조 송이피디아">
+        <meta name="description" content="영화 평점, 리뷰 및 영화관 좌석 예매 서비스를 제공하는 송이피디아 웹사이트">
+        <title>영화 예매 - snowpedia</title>
+        <link href="팀8_송이피디아_booking.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main">본문 바로가기</a>
+        <!-- 헤더 -->
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="logo" href="팀8_송이피디아_main.html">
+                    <img src="images/팀8_snowpedia-logo.png" alt="snowpedia" />
+                </a>
+                <nav class="main-nav">
+                    <a href="팀8_송이피디아_main.html">홈</a>
+                    <a href="팀8_송이피디아_booking.html">영화예매</a>
+                    <a href="#">리뷰</a>
+                    <a href="팀8_송이피디아_mypage.html">마이페이지</a>
+                </nav>
+                <!-- 검색창 -->
+                <div class="search-box" role="search">
+                    <label class="visually-hidden" for="site-search">작품명 검색</label>
+                    <span class="search-icon"></span>
+                    <input id="site-search" placeholder="작품명, 배우, 감독을 검색해 보세요" type="search" />
                 </div>
-            </aside>
-        </div>
-    </main>
-    <!-- 푸터 -->
-    <footer class="site-footer">
-        <p>8조 송이피디아</p>
-        <p>영화 탐색부터 평점, 예매까지 한 곳에서</p>
-    </footer>
-</body>
-
+                <div class="account-links">
+                    <a href="#">로그인</a>
+                    <a class="button signup" href="#">회원가입</a>
+                </div>
+            </div>
+        </header>
+        <main class="container section" id="main">
+            <div class="page-heading">
+                <h1>영화 예매</h1>
+            </div>
+            <!-- 예매 화면 -->
+            <div class="booking-layout">
+                <div class="booking-main">
+                    <fieldset class="movie-picker">
+                        <legend>상영작</legend>
+                        <!-- 영화별 링크 대상 -->
+                        <span id="chiikawa" class="movie-target"></span>
+                        <span id="odyssey" class="movie-target"></span>
+                        <span id="assassins" class="movie-target"></span>
+                        <!-- 영화 선택 -->
+                        <div class="movie-tabs">
+                            <a href="#chiikawa">극장판 치이카와-인어 섬의 비밀</a>
+                            <a href="#odyssey">오디세이</a>
+                            <a href="#assassins">암살자(들)</a>
+                        </div>
+                        <div>
+                            <!-- 치이카와 예매 -->
+                            <section class="movie-panel chiikawa-panel">
+                                <div class="theme-head chiikawa-theme">
+                                    <div>
+                                        <h2>극장판 치이카와-인어 섬의 비밀</h2>
+                                    </div>
+                                    <span>THEMED SEATS</span>
+                                </div>
+                                <!-- 영화 정보 -->
+                                <div class="movie-info-card">
+                                    <a class="movie-info-poster" href="팀8_송이피디아_ratingchiikawa.html">
+                                        <img src="images/팀8_chiikawa_poster.png" alt="치이카와 포스터" />
+                                    </a>
+                                    <div class="movie-info-body">
+                                        <div class="movie-info-topline">
+                                            <span class="info-kicker">NOW SHOWING</span>
+                                            <span class="score-pill"><span>★</span> 4.3 <small>/ 5.0</small></span>
+                                        </div>
+                                        <p class="info-meta">애니메이션 <span>·</span> 99분 <span class="review-count">428명 평가</span></p>
+                                        <dl class="credit-list">
+                                            <div>
+                                                <dt>감독</dt>
+                                                <dd>오이카와 케이</dd>
+                                            </div>
+                                            <div>
+                                                <dt>출연</dt>
+                                                <dd>이주은, 손정민, 권다예</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="mini-review">
+                                            <div class="review-title">
+                                                <strong>관객 한줄평</strong>
+                                                <span>울랄라세션 · 메인 인기 리뷰</span>
+                                            </div>
+                                            <p>“아주 재밌었다. 또 보고 싶다. 너무 감동적이었다.”</p>
+                                        </div>
+                                        <a class="rating-link" href="팀8_송이피디아_ratingchiikawa.html">영화 평점·리뷰 더 보기 <span>→</span></a>
+                                    </div>
+                                </div>
+                                <div class="option-grid">
+                                    <!-- 영화관 지점 선택 -->
+                                    <fieldset class="option-group">
+                                        <legend>영화관 지점</legend>
+                                        <div class="chips">
+                                            <input checked="" class="visually-hidden chip-input" id="chiikawa-theater-0" name="chiikawa-theater" type="radio" />
+                                            <label for="chiikawa-theater-0">CGV 용산아이파크몰</label>
+                                            <input class="visually-hidden chip-input" id="chiikawa-theater-1" name="chiikawa-theater" type="radio" />
+                                            <label for="chiikawa-theater-1">CGV 왕십리</label>
+                                            <input class="visually-hidden chip-input" id="chiikawa-theater-2" name="chiikawa-theater" type="radio" />
+                                            <label for="chiikawa-theater-2">CGV 영등포타임스퀘어</label>
+                                            <input class="visually-hidden chip-input" id="chiikawa-theater-3" name="chiikawa-theater" type="radio" />
+                                            <label for="chiikawa-theater-3">CGV 강변</label>
+                                            <input class="visually-hidden chip-input" id="chiikawa-theater-4" name="chiikawa-theater" type="radio" />
+                                            <label for="chiikawa-theater-4">CGV 여의도</label>
+                                            <input class="visually-hidden chip-input" id="chiikawa-theater-5" name="chiikawa-theater" type="radio" />
+                                            <label for="chiikawa-theater-5">CGV 압구정</label>
+                                            <input class="visually-hidden chip-input" id="chiikawa-theater-6" name="chiikawa-theater" type="radio" />
+                                            <label for="chiikawa-theater-6">CGV 홍대</label>
+                                            <input class="visually-hidden chip-input" id="chiikawa-theater-7" name="chiikawa-theater" type="radio" />
+                                            <label for="chiikawa-theater-7">CGV 천호</label>
+                                            <input class="visually-hidden chip-input" id="chiikawa-theater-8" name="chiikawa-theater" type="radio" />
+                                            <label for="chiikawa-theater-8">CGV 중계</label>
+                                        </div>
+                                    </fieldset>
+                                    <!-- 상영관 종류 선택 -->
+                                    <fieldset class="option-group">
+                                        <legend>상영관 종류</legend>
+                                        <div class="chips">
+                                            <input checked="" class="visually-hidden chip-input" id="chiikawa-format-standard" name="chiikawa-format" type="radio" />
+                                            <label for="chiikawa-format-standard">일반 2D</label>
+                                            <span class="format-extra">
+                                                <input class="visually-hidden chip-input" id="chiikawa-format-imax" name="chiikawa-format" type="radio" />
+                                                <label for="chiikawa-format-imax">IMAX</label>
+                                                <input class="visually-hidden chip-input" id="chiikawa-format-4dx" name="chiikawa-format" type="radio" />
+                                                <label for="chiikawa-format-4dx">4DX</label>
+                                                <input class="visually-hidden chip-input" id="chiikawa-format-screenx" name="chiikawa-format" type="radio" />
+                                                <label for="chiikawa-format-screenx">SCREENX</label>
+                                            </span>
+                                        </div>
+                                    </fieldset>
+                                    <!-- 상영시간 선택 -->
+                                    <fieldset class="option-group">
+                                        <legend>상영시간</legend>
+                                        <div class="chips">
+                                            <input class="visually-hidden chip-input" id="chiikawa-time-0" name="chiikawa-time" type="radio" />
+                                            <label for="chiikawa-time-0">10:20</label>
+                                            <input checked="" class="visually-hidden chip-input" id="chiikawa-time-1" name="chiikawa-time" type="radio" />
+                                            <label for="chiikawa-time-1">13:20</label>
+                                            <input class="visually-hidden chip-input" id="chiikawa-time-2" name="chiikawa-time" type="radio" />
+                                            <label for="chiikawa-time-2">16:30</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <!-- 좌석 선택 -->
+                                <fieldset class="seats-field">
+                                    <legend>좌석 선택</legend>
+                                    <div class="screen">SCREEN</div>
+                                    <div class="seat-map" role="group">
+                                        <div class="seat-row">
+                                            <span class="row-label">A</span>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-a1" name="chiikawa-seats" type="checkbox" value="A1" />
+                                            <label class="seat" for="chiikawa-seat-a1" title="A1">
+                                                <span>A1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-a2" name="chiikawa-seats" type="checkbox" value="A2" />
+                                            <label class="seat" for="chiikawa-seat-a2" title="A2">
+                                                <span>A2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="chiikawa-seat-a3" name="chiikawa-seats" type="checkbox" value="A3" />
+                                            <label class="seat seat-taken" for="chiikawa-seat-a3" title="A3 예매 완료">
+                                                <span>A3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="chiikawa-seat-a4" name="chiikawa-seats" type="checkbox" value="A4" />
+                                            <label class="seat seat-taken" for="chiikawa-seat-a4" title="A4 예매 완료">
+                                                <span>A4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-a5" name="chiikawa-seats" type="checkbox" value="A5" />
+                                            <label class="seat" for="chiikawa-seat-a5" title="A5">
+                                                <span>A5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-a6" name="chiikawa-seats" type="checkbox" value="A6" />
+                                            <label class="seat" for="chiikawa-seat-a6" title="A6">
+                                                <span>A6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-a7" name="chiikawa-seats" type="checkbox" value="A7" />
+                                            <label class="seat" for="chiikawa-seat-a7" title="A7">
+                                                <span>A7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-a8" name="chiikawa-seats" type="checkbox" value="A8" />
+                                            <label class="seat" for="chiikawa-seat-a8" title="A8">
+                                                <span>A8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">B</span>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-b1" name="chiikawa-seats" type="checkbox" value="B1" />
+                                            <label class="seat" for="chiikawa-seat-b1" title="B1">
+                                                <span>B1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-b2" name="chiikawa-seats" type="checkbox" value="B2" />
+                                            <label class="seat" for="chiikawa-seat-b2" title="B2">
+                                                <span>B2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-b3" name="chiikawa-seats" type="checkbox" value="B3" />
+                                            <label class="seat" for="chiikawa-seat-b3" title="B3">
+                                                <span>B3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-b4" name="chiikawa-seats" type="checkbox" value="B4" />
+                                            <label class="seat" for="chiikawa-seat-b4" title="B4">
+                                                <span>B4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-b5" name="chiikawa-seats" type="checkbox" value="B5" />
+                                            <label class="seat" for="chiikawa-seat-b5" title="B5">
+                                                <span>B5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="chiikawa-seat-b6" name="chiikawa-seats" type="checkbox" value="B6" />
+                                            <label class="seat seat-taken" for="chiikawa-seat-b6" title="B6 예매 완료">
+                                                <span>B6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-b7" name="chiikawa-seats" type="checkbox" value="B7" />
+                                            <label class="seat" for="chiikawa-seat-b7" title="B7">
+                                                <span>B7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-b8" name="chiikawa-seats" type="checkbox" value="B8" />
+                                            <label class="seat" for="chiikawa-seat-b8" title="B8">
+                                                <span>B8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">C</span>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-c1" name="chiikawa-seats" type="checkbox" value="C1" />
+                                            <label class="seat" for="chiikawa-seat-c1" title="C1">
+                                                <span>C1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-c2" name="chiikawa-seats" type="checkbox" value="C2" />
+                                            <label class="seat" for="chiikawa-seat-c2" title="C2">
+                                                <span>C2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-c3" name="chiikawa-seats" type="checkbox" value="C3" />
+                                            <label class="seat" for="chiikawa-seat-c3" title="C3">
+                                                <span>C3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-c4" name="chiikawa-seats" type="checkbox" value="C4" />
+                                            <label class="seat" for="chiikawa-seat-c4" title="C4">
+                                                <span>C4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-c5" name="chiikawa-seats" type="checkbox" value="C5" />
+                                            <label class="seat" for="chiikawa-seat-c5" title="C5">
+                                                <span>C5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-c6" name="chiikawa-seats" type="checkbox" value="C6" />
+                                            <label class="seat" for="chiikawa-seat-c6" title="C6">
+                                                <span>C6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-c7" name="chiikawa-seats" type="checkbox" value="C7" />
+                                            <label class="seat" for="chiikawa-seat-c7" title="C7">
+                                                <span>C7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-c8" name="chiikawa-seats" type="checkbox" value="C8" />
+                                            <label class="seat" for="chiikawa-seat-c8" title="C8">
+                                                <span>C8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">D</span>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="chiikawa-seat-d1" name="chiikawa-seats" type="checkbox" value="D1" />
+                                            <label class="seat seat-taken" for="chiikawa-seat-d1" title="D1 예매 완료">
+                                                <span>D1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-d2" name="chiikawa-seats" type="checkbox" value="D2" />
+                                            <label class="seat" for="chiikawa-seat-d2" title="D2">
+                                                <span>D2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-d3" name="chiikawa-seats" type="checkbox" value="D3" />
+                                            <label class="seat" for="chiikawa-seat-d3" title="D3">
+                                                <span>D3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-d4" name="chiikawa-seats" type="checkbox" value="D4" />
+                                            <label class="seat" for="chiikawa-seat-d4" title="D4">
+                                                <span>D4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-d5" name="chiikawa-seats" type="checkbox" value="D5" />
+                                            <label class="seat" for="chiikawa-seat-d5" title="D5">
+                                                <span>D5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-d6" name="chiikawa-seats" type="checkbox" value="D6" />
+                                            <label class="seat" for="chiikawa-seat-d6" title="D6">
+                                                <span>D6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-d7" name="chiikawa-seats" type="checkbox" value="D7" />
+                                            <label class="seat" for="chiikawa-seat-d7" title="D7">
+                                                <span>D7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-d8" name="chiikawa-seats" type="checkbox" value="D8" />
+                                            <label class="seat" for="chiikawa-seat-d8" title="D8">
+                                                <span>D8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">E</span>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-e1" name="chiikawa-seats" type="checkbox" value="E1" />
+                                            <label class="seat" for="chiikawa-seat-e1" title="E1">
+                                                <span>E1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-e2" name="chiikawa-seats" type="checkbox" value="E2" />
+                                            <label class="seat" for="chiikawa-seat-e2" title="E2">
+                                                <span>E2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-e3" name="chiikawa-seats" type="checkbox" value="E3" />
+                                            <label class="seat" for="chiikawa-seat-e3" title="E3">
+                                                <span>E3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-e4" name="chiikawa-seats" type="checkbox" value="E4" />
+                                            <label class="seat" for="chiikawa-seat-e4" title="E4">
+                                                <span>E4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-e5" name="chiikawa-seats" type="checkbox" value="E5" />
+                                            <label class="seat" for="chiikawa-seat-e5" title="E5">
+                                                <span>E5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-e6" name="chiikawa-seats" type="checkbox" value="E6" />
+                                            <label class="seat" for="chiikawa-seat-e6" title="E6">
+                                                <span>E6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-e7" name="chiikawa-seats" type="checkbox" value="E7" />
+                                            <label class="seat" for="chiikawa-seat-e7" title="E7">
+                                                <span>E7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="chiikawa-seat-e8" name="chiikawa-seats" type="checkbox" value="E8" />
+                                            <label class="seat" for="chiikawa-seat-e8" title="E8">
+                                                <span>E8</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- 좌석 상태 안내 -->
+                                    <div class="seat-legend">
+                                        <span><i></i>선택 가능</span>
+                                        <span><i class="picked"></i>선택 좌석</span>
+                                        <span><i class="unavailable"></i>예매 완료</span>
+                                    </div>
+                                </fieldset>
+                            </section>
+                            <!-- 오디세이 예매 -->
+                            <section class="movie-panel odyssey-panel">
+                                <div class="theme-head odyssey-theme">
+                                    <div>
+                                        <h2>오디세이</h2>
+                                    </div>
+                                    <span>THEMED SEATS</span>
+                                </div>
+                                <!-- 영화 정보 -->
+                                <div class="movie-info-card">
+                                    <a class="movie-info-poster" href="팀8_송이피디아_ratingodyssey.html">
+                                        <img src="images/팀8_odyssey_poster.png" alt="오디세이 포스터" />
+                                    </a>
+                                    <div class="movie-info-body">
+                                        <div class="movie-info-topline">
+                                            <span class="info-kicker">NOW SHOWING</span>
+                                            <span class="score-pill"><span>★</span> 4.1 <small>/ 5.0</small></span>
+                                        </div>
+                                        <p class="info-meta">액션 · 드라마 · 어드벤처 <span>·</span> 172분 <span class="review-count">316명 평가</span></p>
+                                        <dl class="credit-list">
+                                            <div>
+                                                <dt>감독</dt>
+                                                <dd>크리스토퍼 놀란</dd>
+                                            </div>
+                                            <div>
+                                                <dt>출연</dt>
+                                                <dd>맷 데이먼 · 톰 홀랜드 · 앤 해서웨이</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="mini-review">
+                                            <div class="review-title">
+                                                <strong>관객 한줄평</strong>
+                                                <span>눈꽃산책 · 메인 인기 리뷰</span>
+                                            </div>
+                                            <p>“많은 장면들이 오래 기억 남는 영화.”</p>
+                                        </div>
+                                        <a class="rating-link" href="팀8_송이피디아_ratingodyssey.html">영화 평점·리뷰 더 보기 <span>→</span></a>
+                                    </div>
+                                </div>
+                                <div class="option-grid">
+                                    <!-- 영화관 지점 선택 -->
+                                    <fieldset class="option-group">
+                                        <legend>영화관 지점</legend>
+                                        <div class="chips">
+                                            <input checked="" class="visually-hidden chip-input" id="odyssey-theater-0" name="odyssey-theater" type="radio" />
+                                            <label for="odyssey-theater-0">CGV 용산아이파크몰</label>
+                                            <input class="visually-hidden chip-input" id="odyssey-theater-1" name="odyssey-theater" type="radio" />
+                                            <label for="odyssey-theater-1">CGV 왕십리</label>
+                                            <input class="visually-hidden chip-input" id="odyssey-theater-2" name="odyssey-theater" type="radio" />
+                                            <label for="odyssey-theater-2">CGV 영등포타임스퀘어</label>
+                                            <input class="visually-hidden chip-input" id="odyssey-theater-3" name="odyssey-theater" type="radio" />
+                                            <label for="odyssey-theater-3">CGV 강변</label>
+                                            <input class="visually-hidden chip-input" id="odyssey-theater-4" name="odyssey-theater" type="radio" />
+                                            <label for="odyssey-theater-4">CGV 여의도</label>
+                                            <input class="visually-hidden chip-input" id="odyssey-theater-5" name="odyssey-theater" type="radio" />
+                                            <label for="odyssey-theater-5">CGV 압구정</label>
+                                            <input class="visually-hidden chip-input" id="odyssey-theater-6" name="odyssey-theater" type="radio" />
+                                            <label for="odyssey-theater-6">CGV 홍대</label>
+                                            <input class="visually-hidden chip-input" id="odyssey-theater-7" name="odyssey-theater" type="radio" />
+                                            <label for="odyssey-theater-7">CGV 천호</label>
+                                            <input class="visually-hidden chip-input" id="odyssey-theater-8" name="odyssey-theater" type="radio" />
+                                            <label for="odyssey-theater-8">CGV 중계</label>
+                                        </div>
+                                    </fieldset>
+                                    <!-- 상영관 종류 선택 -->
+                                    <fieldset class="option-group">
+                                        <legend>상영관 종류</legend>
+                                        <div class="chips">
+                                            <input checked="" class="visually-hidden chip-input" id="odyssey-format-standard" name="odyssey-format" type="radio" />
+                                            <label for="odyssey-format-standard">일반 2D</label>
+                                            <span class="format-extra">
+                                                <input class="visually-hidden chip-input" id="odyssey-format-imax" name="odyssey-format" type="radio" />
+                                                <label for="odyssey-format-imax">IMAX</label>
+                                                <input class="visually-hidden chip-input" id="odyssey-format-4dx" name="odyssey-format" type="radio" />
+                                                <label for="odyssey-format-4dx">4DX</label>
+                                                <input class="visually-hidden chip-input" id="odyssey-format-screenx" name="odyssey-format" type="radio" />
+                                                <label for="odyssey-format-screenx">SCREENX</label>
+                                            </span>
+                                        </div>
+                                    </fieldset>
+                                    <!-- 상영시간 선택 -->
+                                    <fieldset class="option-group">
+                                        <legend>상영시간</legend>
+                                        <div class="chips">
+                                            <input class="visually-hidden chip-input" id="odyssey-time-0" name="odyssey-time" type="radio" />
+                                            <label for="odyssey-time-0">11:00</label>
+                                            <input checked="" class="visually-hidden chip-input" id="odyssey-time-1" name="odyssey-time" type="radio" />
+                                            <label for="odyssey-time-1">14:10</label>
+                                            <input class="visually-hidden chip-input" id="odyssey-time-2" name="odyssey-time" type="radio" />
+                                            <label for="odyssey-time-2">18:20</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <!-- 좌석 선택 -->
+                                <fieldset class="seats-field">
+                                    <legend>좌석 선택</legend>
+                                    <div class="screen">SCREEN</div>
+                                    <div class="seat-map" role="group">
+                                        <div class="seat-row">
+                                            <span class="row-label">A</span>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-a1" name="odyssey-seats" type="checkbox" value="A1" />
+                                            <label class="seat" for="odyssey-seat-a1" title="A1">
+                                                <span>A1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-a2" name="odyssey-seats" type="checkbox" value="A2" />
+                                            <label class="seat" for="odyssey-seat-a2" title="A2">
+                                                <span>A2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="odyssey-seat-a3" name="odyssey-seats" type="checkbox" value="A3" />
+                                            <label class="seat seat-taken" for="odyssey-seat-a3" title="A3 예매 완료">
+                                                <span>A3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="odyssey-seat-a4" name="odyssey-seats" type="checkbox" value="A4" />
+                                            <label class="seat seat-taken" for="odyssey-seat-a4" title="A4 예매 완료">
+                                                <span>A4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-a5" name="odyssey-seats" type="checkbox" value="A5" />
+                                            <label class="seat" for="odyssey-seat-a5" title="A5">
+                                                <span>A5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-a6" name="odyssey-seats" type="checkbox" value="A6" />
+                                            <label class="seat" for="odyssey-seat-a6" title="A6">
+                                                <span>A6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-a7" name="odyssey-seats" type="checkbox" value="A7" />
+                                            <label class="seat" for="odyssey-seat-a7" title="A7">
+                                                <span>A7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-a8" name="odyssey-seats" type="checkbox" value="A8" />
+                                            <label class="seat" for="odyssey-seat-a8" title="A8">
+                                                <span>A8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">B</span>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-b1" name="odyssey-seats" type="checkbox" value="B1" />
+                                            <label class="seat" for="odyssey-seat-b1" title="B1">
+                                                <span>B1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-b2" name="odyssey-seats" type="checkbox" value="B2" />
+                                            <label class="seat" for="odyssey-seat-b2" title="B2">
+                                                <span>B2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-b3" name="odyssey-seats" type="checkbox" value="B3" />
+                                            <label class="seat" for="odyssey-seat-b3" title="B3">
+                                                <span>B3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-b4" name="odyssey-seats" type="checkbox" value="B4" />
+                                            <label class="seat" for="odyssey-seat-b4" title="B4">
+                                                <span>B4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-b5" name="odyssey-seats" type="checkbox" value="B5" />
+                                            <label class="seat" for="odyssey-seat-b5" title="B5">
+                                                <span>B5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="odyssey-seat-b6" name="odyssey-seats" type="checkbox" value="B6" />
+                                            <label class="seat seat-taken" for="odyssey-seat-b6" title="B6 예매 완료">
+                                                <span>B6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-b7" name="odyssey-seats" type="checkbox" value="B7" />
+                                            <label class="seat" for="odyssey-seat-b7" title="B7">
+                                                <span>B7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-b8" name="odyssey-seats" type="checkbox" value="B8" />
+                                            <label class="seat" for="odyssey-seat-b8" title="B8">
+                                                <span>B8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">C</span>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-c1" name="odyssey-seats" type="checkbox" value="C1" />
+                                            <label class="seat" for="odyssey-seat-c1" title="C1">
+                                                <span>C1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-c2" name="odyssey-seats" type="checkbox" value="C2" />
+                                            <label class="seat" for="odyssey-seat-c2" title="C2">
+                                                <span>C2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-c3" name="odyssey-seats" type="checkbox" value="C3" />
+                                            <label class="seat" for="odyssey-seat-c3" title="C3">
+                                                <span>C3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-c4" name="odyssey-seats" type="checkbox" value="C4" />
+                                            <label class="seat" for="odyssey-seat-c4" title="C4">
+                                                <span>C4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-c5" name="odyssey-seats" type="checkbox" value="C5" />
+                                            <label class="seat" for="odyssey-seat-c5" title="C5">
+                                                <span>C5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-c6" name="odyssey-seats" type="checkbox" value="C6" />
+                                            <label class="seat" for="odyssey-seat-c6" title="C6">
+                                                <span>C6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-c7" name="odyssey-seats" type="checkbox" value="C7" />
+                                            <label class="seat" for="odyssey-seat-c7" title="C7">
+                                                <span>C7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-c8" name="odyssey-seats" type="checkbox" value="C8" />
+                                            <label class="seat" for="odyssey-seat-c8" title="C8">
+                                                <span>C8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">D</span>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="odyssey-seat-d1" name="odyssey-seats" type="checkbox" value="D1" />
+                                            <label class="seat seat-taken" for="odyssey-seat-d1" title="D1 예매 완료">
+                                                <span>D1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-d2" name="odyssey-seats" type="checkbox" value="D2" />
+                                            <label class="seat" for="odyssey-seat-d2" title="D2">
+                                                <span>D2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-d3" name="odyssey-seats" type="checkbox" value="D3" />
+                                            <label class="seat" for="odyssey-seat-d3" title="D3">
+                                                <span>D3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-d4" name="odyssey-seats" type="checkbox" value="D4" />
+                                            <label class="seat" for="odyssey-seat-d4" title="D4">
+                                                <span>D4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-d5" name="odyssey-seats" type="checkbox" value="D5" />
+                                            <label class="seat" for="odyssey-seat-d5" title="D5">
+                                                <span>D5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-d6" name="odyssey-seats" type="checkbox" value="D6" />
+                                            <label class="seat" for="odyssey-seat-d6" title="D6">
+                                                <span>D6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-d7" name="odyssey-seats" type="checkbox" value="D7" />
+                                            <label class="seat" for="odyssey-seat-d7" title="D7">
+                                                <span>D7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-d8" name="odyssey-seats" type="checkbox" value="D8" />
+                                            <label class="seat" for="odyssey-seat-d8" title="D8">
+                                                <span>D8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">E</span>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-e1" name="odyssey-seats" type="checkbox" value="E1" />
+                                            <label class="seat" for="odyssey-seat-e1" title="E1">
+                                                <span>E1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-e2" name="odyssey-seats" type="checkbox" value="E2" />
+                                            <label class="seat" for="odyssey-seat-e2" title="E2">
+                                                <span>E2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-e3" name="odyssey-seats" type="checkbox" value="E3" />
+                                            <label class="seat" for="odyssey-seat-e3" title="E3">
+                                                <span>E3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-e4" name="odyssey-seats" type="checkbox" value="E4" />
+                                            <label class="seat" for="odyssey-seat-e4" title="E4">
+                                                <span>E4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-e5" name="odyssey-seats" type="checkbox" value="E5" />
+                                            <label class="seat" for="odyssey-seat-e5" title="E5">
+                                                <span>E5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-e6" name="odyssey-seats" type="checkbox" value="E6" />
+                                            <label class="seat" for="odyssey-seat-e6" title="E6">
+                                                <span>E6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-e7" name="odyssey-seats" type="checkbox" value="E7" />
+                                            <label class="seat" for="odyssey-seat-e7" title="E7">
+                                                <span>E7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="odyssey-seat-e8" name="odyssey-seats" type="checkbox" value="E8" />
+                                            <label class="seat" for="odyssey-seat-e8" title="E8">
+                                                <span>E8</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- 좌석 상태 안내 -->
+                                    <div class="seat-legend">
+                                        <span><i></i>선택 가능</span>
+                                        <span><i class="picked"></i>선택 좌석</span>
+                                        <span><i class="unavailable"></i>예매 완료</span>
+                                    </div>
+                                </fieldset>
+                            </section>
+                            <!-- 암살자(들) 예매 -->
+                            <section class="movie-panel assassins-panel">
+                                <div class="theme-head assassins-theme">
+                                    <div>
+                                        <h2>암살자(들)</h2>
+                                    </div>
+                                    <span>THEMED SEATS</span>
+                                </div>
+                                <!-- 영화 정보 -->
+                                <div class="movie-info-card">
+                                    <a class="movie-info-poster" href="팀8_송이피디아_ratingassassins.html">
+                                        <img src="images/팀8_assassins_poster.png" alt="암살자(들) 포스터" />
+                                    </a>
+                                    <div class="movie-info-body">
+                                        <div class="movie-info-topline">
+                                            <span class="info-kicker">NOW SHOWING</span>
+                                            <span class="score-pill"><span>★</span> 4.4 <small>/ 5.0</small></span>
+                                        </div>
+                                        <p class="info-meta">범죄 · 드라마 <span>·</span> 131분 <span class="review-count">582명 평가</span></p>
+                                        <dl class="credit-list">
+                                            <div>
+                                                <dt>감독</dt>
+                                                <dd>허진호</dd>
+                                            </div>
+                                            <div>
+                                                <dt>출연</dt>
+                                                <dd>유해진, 박해일, 이민호</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="mini-review">
+                                            <div class="review-title">
+                                                <strong>관객 한줄평</strong>
+                                                <span>버섯모둠 · 메인 인기 리뷰</span>
+                                            </div>
+                                            <p>"지나가는 장면들 사이로 시대를 엿보다"</p>
+                                        </div>
+                                        <a class="rating-link" href="팀8_송이피디아_ratingassassins.html">영화 평점·리뷰 더 보기 <span>→</span></a>
+                                    </div>
+                                </div>
+                                <div class="option-grid">
+                                    <!-- 영화관 지점 선택 -->
+                                    <fieldset class="option-group">
+                                        <legend>영화관 지점</legend>
+                                        <div class="chips">
+                                            <input checked="" class="visually-hidden chip-input" id="assassins-theater-0" name="assassins-theater" type="radio" />
+                                            <label for="assassins-theater-0">CGV 용산아이파크몰</label>
+                                            <input class="visually-hidden chip-input" id="assassins-theater-1" name="assassins-theater" type="radio" />
+                                            <label for="assassins-theater-1">CGV 왕십리</label>
+                                            <input class="visually-hidden chip-input" id="assassins-theater-2" name="assassins-theater" type="radio" />
+                                            <label for="assassins-theater-2">CGV 영등포타임스퀘어</label>
+                                            <input class="visually-hidden chip-input" id="assassins-theater-3" name="assassins-theater" type="radio" />
+                                            <label for="assassins-theater-3">CGV 강변</label>
+                                            <input class="visually-hidden chip-input" id="assassins-theater-4" name="assassins-theater" type="radio" />
+                                            <label for="assassins-theater-4">CGV 여의도</label>
+                                            <input class="visually-hidden chip-input" id="assassins-theater-5" name="assassins-theater" type="radio" />
+                                            <label for="assassins-theater-5">CGV 압구정</label>
+                                            <input class="visually-hidden chip-input" id="assassins-theater-6" name="assassins-theater" type="radio" />
+                                            <label for="assassins-theater-6">CGV 홍대</label>
+                                            <input class="visually-hidden chip-input" id="assassins-theater-7" name="assassins-theater" type="radio" />
+                                            <label for="assassins-theater-7">CGV 천호</label>
+                                            <input class="visually-hidden chip-input" id="assassins-theater-8" name="assassins-theater" type="radio" />
+                                            <label for="assassins-theater-8">CGV 중계</label>
+                                        </div>
+                                    </fieldset>
+                                    <!-- 상영관 종류 선택 -->
+                                    <fieldset class="option-group">
+                                        <legend>상영관 종류</legend>
+                                        <div class="chips">
+                                            <input checked="" class="visually-hidden chip-input" id="assassins-format-standard" name="assassins-format" type="radio" />
+                                            <label for="assassins-format-standard">일반 2D</label>
+                                            <span class="format-extra">
+                                                <input class="visually-hidden chip-input" id="assassins-format-imax" name="assassins-format" type="radio" />
+                                                <label for="assassins-format-imax">IMAX</label>
+                                                <input class="visually-hidden chip-input" id="assassins-format-4dx" name="assassins-format" type="radio" />
+                                                <label for="assassins-format-4dx">4DX</label>
+                                                <input class="visually-hidden chip-input" id="assassins-format-screenx" name="assassins-format" type="radio" />
+                                                <label for="assassins-format-screenx">SCREENX</label>
+                                            </span>
+                                        </div>
+                                    </fieldset>
+                                    <!-- 상영시간 선택 -->
+                                    <fieldset class="option-group">
+                                        <legend>상영시간</legend>
+                                        <div class="chips">
+                                            <input class="visually-hidden chip-input" id="assassins-time-0" name="assassins-time" type="radio" />
+                                            <label for="assassins-time-0">09:40</label>
+                                            <input checked="" class="visually-hidden chip-input" id="assassins-time-1" name="assassins-time" type="radio" />
+                                            <label for="assassins-time-1">12:50</label>
+                                            <input class="visually-hidden chip-input" id="assassins-time-2" name="assassins-time" type="radio" />
+                                            <label for="assassins-time-2">17:00</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <!-- 좌석 선택 -->
+                                <fieldset class="seats-field">
+                                    <legend>좌석 선택</legend>
+                                    <div class="screen">SCREEN</div>
+                                    <div class="seat-map" role="group">
+                                        <div class="seat-row">
+                                            <span class="row-label">A</span>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-a1" name="assassins-seats" type="checkbox" value="A1" />
+                                            <label class="seat" for="assassins-seat-a1" title="A1">
+                                                <span>A1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-a2" name="assassins-seats" type="checkbox" value="A2" />
+                                            <label class="seat" for="assassins-seat-a2" title="A2">
+                                                <span>A2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="assassins-seat-a3" name="assassins-seats" type="checkbox" value="A3" />
+                                            <label class="seat seat-taken" for="assassins-seat-a3" title="A3 예매 완료">
+                                                <span>A3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="assassins-seat-a4" name="assassins-seats" type="checkbox" value="A4" />
+                                            <label class="seat seat-taken" for="assassins-seat-a4" title="A4 예매 완료">
+                                                <span>A4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-a5" name="assassins-seats" type="checkbox" value="A5" />
+                                            <label class="seat" for="assassins-seat-a5" title="A5">
+                                                <span>A5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-a6" name="assassins-seats" type="checkbox" value="A6" />
+                                            <label class="seat" for="assassins-seat-a6" title="A6">
+                                                <span>A6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-a7" name="assassins-seats" type="checkbox" value="A7" />
+                                            <label class="seat" for="assassins-seat-a7" title="A7">
+                                                <span>A7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-a8" name="assassins-seats" type="checkbox" value="A8" />
+                                            <label class="seat" for="assassins-seat-a8" title="A8">
+                                                <span>A8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">B</span>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-b1" name="assassins-seats" type="checkbox" value="B1" />
+                                            <label class="seat" for="assassins-seat-b1" title="B1">
+                                                <span>B1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-b2" name="assassins-seats" type="checkbox" value="B2" />
+                                            <label class="seat" for="assassins-seat-b2" title="B2">
+                                                <span>B2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-b3" name="assassins-seats" type="checkbox" value="B3" />
+                                            <label class="seat" for="assassins-seat-b3" title="B3">
+                                                <span>B3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-b4" name="assassins-seats" type="checkbox" value="B4" />
+                                            <label class="seat" for="assassins-seat-b4" title="B4">
+                                                <span>B4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-b5" name="assassins-seats" type="checkbox" value="B5" />
+                                            <label class="seat" for="assassins-seat-b5" title="B5">
+                                                <span>B5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="assassins-seat-b6" name="assassins-seats" type="checkbox" value="B6" />
+                                            <label class="seat seat-taken" for="assassins-seat-b6" title="B6 예매 완료">
+                                                <span>B6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-b7" name="assassins-seats" type="checkbox" value="B7" />
+                                            <label class="seat" for="assassins-seat-b7" title="B7">
+                                                <span>B7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-b8" name="assassins-seats" type="checkbox" value="B8" />
+                                            <label class="seat" for="assassins-seat-b8" title="B8">
+                                                <span>B8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">C</span>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-c1" name="assassins-seats" type="checkbox" value="C1" />
+                                            <label class="seat" for="assassins-seat-c1" title="C1">
+                                                <span>C1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-c2" name="assassins-seats" type="checkbox" value="C2" />
+                                            <label class="seat" for="assassins-seat-c2" title="C2">
+                                                <span>C2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-c3" name="assassins-seats" type="checkbox" value="C3" />
+                                            <label class="seat" for="assassins-seat-c3" title="C3">
+                                                <span>C3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-c4" name="assassins-seats" type="checkbox" value="C4" />
+                                            <label class="seat" for="assassins-seat-c4" title="C4">
+                                                <span>C4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-c5" name="assassins-seats" type="checkbox" value="C5" />
+                                            <label class="seat" for="assassins-seat-c5" title="C5">
+                                                <span>C5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-c6" name="assassins-seats" type="checkbox" value="C6" />
+                                            <label class="seat" for="assassins-seat-c6" title="C6">
+                                                <span>C6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-c7" name="assassins-seats" type="checkbox" value="C7" />
+                                            <label class="seat" for="assassins-seat-c7" title="C7">
+                                                <span>C7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-c8" name="assassins-seats" type="checkbox" value="C8" />
+                                            <label class="seat" for="assassins-seat-c8" title="C8">
+                                                <span>C8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">D</span>
+                                            <input class="seat-checkbox visually-hidden" disabled="" id="assassins-seat-d1" name="assassins-seats" type="checkbox" value="D1" />
+                                            <label class="seat seat-taken" for="assassins-seat-d1" title="D1 예매 완료">
+                                                <span>D1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-d2" name="assassins-seats" type="checkbox" value="D2" />
+                                            <label class="seat" for="assassins-seat-d2" title="D2">
+                                                <span>D2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-d3" name="assassins-seats" type="checkbox" value="D3" />
+                                            <label class="seat" for="assassins-seat-d3" title="D3">
+                                                <span>D3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-d4" name="assassins-seats" type="checkbox" value="D4" />
+                                            <label class="seat" for="assassins-seat-d4" title="D4">
+                                                <span>D4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-d5" name="assassins-seats" type="checkbox" value="D5" />
+                                            <label class="seat" for="assassins-seat-d5" title="D5">
+                                                <span>D5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-d6" name="assassins-seats" type="checkbox" value="D6" />
+                                            <label class="seat" for="assassins-seat-d6" title="D6">
+                                                <span>D6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-d7" name="assassins-seats" type="checkbox" value="D7" />
+                                            <label class="seat" for="assassins-seat-d7" title="D7">
+                                                <span>D7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-d8" name="assassins-seats" type="checkbox" value="D8" />
+                                            <label class="seat" for="assassins-seat-d8" title="D8">
+                                                <span>D8</span>
+                                            </label>
+                                        </div>
+                                        <div class="seat-row">
+                                            <span class="row-label">E</span>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-e1" name="assassins-seats" type="checkbox" value="E1" />
+                                            <label class="seat" for="assassins-seat-e1" title="E1">
+                                                <span>E1</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-e2" name="assassins-seats" type="checkbox" value="E2" />
+                                            <label class="seat" for="assassins-seat-e2" title="E2">
+                                                <span>E2</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-e3" name="assassins-seats" type="checkbox" value="E3" />
+                                            <label class="seat" for="assassins-seat-e3" title="E3">
+                                                <span>E3</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-e4" name="assassins-seats" type="checkbox" value="E4" />
+                                            <label class="seat" for="assassins-seat-e4" title="E4">
+                                                <span>E4</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-e5" name="assassins-seats" type="checkbox" value="E5" />
+                                            <label class="seat" for="assassins-seat-e5" title="E5">
+                                                <span>E5</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-e6" name="assassins-seats" type="checkbox" value="E6" />
+                                            <label class="seat" for="assassins-seat-e6" title="E6">
+                                                <span>E6</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-e7" name="assassins-seats" type="checkbox" value="E7" />
+                                            <label class="seat" for="assassins-seat-e7" title="E7">
+                                                <span>E7</span>
+                                            </label>
+                                            <input class="seat-checkbox visually-hidden" id="assassins-seat-e8" name="assassins-seats" type="checkbox" value="E8" />
+                                            <label class="seat" for="assassins-seat-e8" title="E8">
+                                                <span>E8</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- 좌석 상태 안내 -->
+                                    <div class="seat-legend">
+                                        <span><i></i>선택 가능</span>
+                                        <span><i class="picked"></i>선택 좌석</span>
+                                        <span><i class="unavailable"></i>예매 완료</span>
+                                    </div>
+                                </fieldset>
+                            </section>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- 결제정보 -->
+                <aside class="booking-summary">
+                    <div class="payment-ticket">
+                        <div class="ticket-heading">
+                            <h2>결제정보</h2>
+                        </div>
+                        <!-- 예매내역 -->
+                        <div class="ticket-body">
+                            <div class="ticket-movie chiikawa-ticket">
+                                <img src="images/팀8_chiikawa_poster.png" alt="치이카와 포스터" width="56" height="80">
+                                <div>
+                                    <span class="ticket-age">전체관람가</span>
+                                    <h3>극장판 치이카와-인어 섬의 비밀</h3>
+                                </div>
+                            </div>
+                            <div class="ticket-movie assassins-ticket">
+                                <img src="images/팀8_assassins_poster.png" alt="암살자(들) 포스터" width="56" height="80">
+                                <div>
+                                    <span class="ticket-age">12세 관람가</span>
+                                    <h3>암살자(들)</h3>
+                                </div>
+                            </div>
+                            <div class="ticket-movie odyssey-ticket">
+                                <img src="images/팀8_odyssey_poster.png" alt="오디세이 포스터" width="56" height="80">
+                                <div>
+                                    <span class="ticket-age">15세관람가</span>
+                                    <h3>오디세이</h3>
+                                </div>
+                            </div>
+                            <dl class="ticket-details">
+                                <div>
+                                    <dt>영화관</dt>
+                                    <dd>CGV 용산아이파크몰</dd>
+                                </div>
+                                <div>
+                                    <dt>상영관</dt>
+                                    <dd>7관-일반 2D</dd>
+                                </div>
+                                <div>
+                                    <dt>상영시간</dt>
+                                    <dd>13:20</dd>
+                                </div>
+                                <div>
+                                    <dt>관람인원</dt>
+                                    <dd>성인 2명</dd>
+                                </div>
+                                <div>
+                                    <dt>관람좌석</dt>
+                                    <dd><span class="ticket-seat">C5</span><span class="ticket-seat">C6</span></dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- 결제금액 -->
+                        <div class="ticket-payment">
+                            <div class="ticket-total">
+                                <span>총 결제금액</span>
+                                <strong>30,000<span>원</span></strong>
+                            </div>
+                            <button class="button ticket-pay" type="button">결제하기 <span>→</span></button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <!-- 푸터 -->
+        <footer class="site-footer">
+            <p>8조 송이피디아</p>
+            <p>영화 탐색부터 평점, 예매까지 한 곳에서</p>
+        </footer>
+    </body>
 </html>
