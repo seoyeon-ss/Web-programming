@@ -128,6 +128,9 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .category-menu label { padding: 8px 16px; border-radius: 20px; background: #f4f6f9; cursor: pointer; font-size: 14px; }
 .category-menu label:hover { background: #e2eaf5; color: #003087; }
 .rank-panel { display: none; }
+.theater-panel {
+  display: block;
+}
 
 /* 포스터 목록 */
 .poster-list { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 24px; }
@@ -159,21 +162,18 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid
 .wish:hover .wish-mark { transform: scale(1.08); box-shadow: 0 3px 10px rgba(0, 48, 135, 0.25); }
 
 /* 선택한 목록만 보이기 */
-#movie-theater:checked ~ .rank-panels #panel-movie-theater { display: block; }
 #movie-netflix:checked ~ .rank-panels #panel-movie-netflix { display: block; }
 #movie-watcha:checked ~ .rank-panels #panel-movie-watcha { display: block; }
 #series-netflix:checked ~ .rank-panels #panel-series-netflix { display: block; }
 #series-watcha:checked ~ .rank-panels #panel-series-watcha { display: block; }
 
 /* 선택한 버튼 색상 */
-#movie-theater:checked ~ .category-menu label[for="movie-theater"] { background: #003087; color: #fff; }
 #movie-netflix:checked ~ .category-menu label[for="movie-netflix"] { background: #003087; color: #fff; }
 #movie-watcha:checked ~ .category-menu label[for="movie-watcha"] { background: #003087; color: #fff; }
 #series-netflix:checked ~ .category-menu label[for="series-netflix"] { background: #003087; color: #fff; }
 #series-watcha:checked ~ .category-menu label[for="series-watcha"] { background: #003087; color: #fff; }
 
 /* 키보드로 선택한 버튼 */
-#movie-theater:focus-visible ~ .category-menu label[for="movie-theater"] { outline: 3px solid #003087; outline-offset: 3px; }
 #movie-netflix:focus-visible ~ .category-menu label[for="movie-netflix"] { outline: 3px solid #003087; outline-offset: 3px; }
 #movie-watcha:focus-visible ~ .category-menu label[for="movie-watcha"] { outline: 3px solid #003087; outline-offset: 3px; }
 #series-netflix:focus-visible ~ .category-menu label[for="series-netflix"] { outline: 3px solid #003087; outline-offset: 3px; }
